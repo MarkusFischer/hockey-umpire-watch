@@ -1,10 +1,13 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 
-class hockey_umpire_watchView extends WatchUi.View {
+class hockey_umpire_watchMainView extends WatchUi.View {
 
-    function initialize() {
+    private var _timeKeeper as TimeKeeper; 
+
+    function initialize(timeKeeper as TimeKeeper) {
         View.initialize();
+        self._timeKeeper = timeKeeper;
     }
 
     // Load your resources here
@@ -22,6 +25,11 @@ class hockey_umpire_watchView extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+
+        var quarterLabel = View.findDrawableById("quarter");
+        if (quarterLabel instanceof Text) {
+            quarterLabel.setText("Q" + self._timeKeeper.getCurrentQuarter());
+        }
     }
 
     // Called when this View is removed from the screen. Save the

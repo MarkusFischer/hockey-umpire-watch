@@ -1,0 +1,5 @@
+<properties>
+    <property id="maxQuarters" type="long">4</property>
+    <property id="quarterTime" type="long">60</property> <!--TODO replace with actual value-->
+    <property id="displayRefreshRate" type="number">100</property>
+</properties>

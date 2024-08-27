@@ -1,0 +1,5 @@
+<settings>
+    <setting propertyKey="@Properties.maxQuarters" title="maxQuarters">
+        <settingConfig type="numeric" min="1" max="4" />
+    </setting>
+</settings>

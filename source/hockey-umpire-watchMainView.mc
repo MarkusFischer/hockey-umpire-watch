@@ -1,14 +1,16 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
+import Toybox.Time;
+import Toybox.Time.Gregorian;
 
 class hockey_umpire_watchMainView extends WatchUi.View {
 
-    private var _timeKeeper as TimeKeeper; 
-
-    function initialize(timeKeeper as TimeKeeper) {
+    private var _app as hockey_umpire_watchApp;
+    
+    function initialize(app as hockey_umpire_watchApp) {
         View.initialize();
-        self._timeKeeper = timeKeeper;
+        self._app = app;
     }
 
     // Load your resources here
@@ -29,24 +31,48 @@ class hockey_umpire_watchMainView extends WatchUi.View {
 
         var quarterLabel = View.findDrawableById("quarter");
         if (quarterLabel instanceof Text) {
-            quarterLabel.setText("Q" + self._timeKeeper.getCurrentQuarter());
+            quarterLabel.setText("Q" + self._app.getTimeKeeper().getCurrentQuarter());
         }
         var remainingPlayTimeLabel = View.findDrawableById("remainingPlayTime");
         if (remainingPlayTimeLabel instanceof Text) {
-            remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._timeKeeper.remainingPlayTime()));
+            if (self._app.getTimeKeeper().getCurrentQuarter() <= self._app.getTimeKeeper().maxQuarters) {
+                remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().remainingPlayTime()));
+            } else {
+                remainingPlayTimeLabel.setFont(Graphics.FONT_SYSTEM_MEDIUM);
+                remainingPlayTimeLabel.setText("Playtime over!");
+            }
+            
         }
         var gameMinuteLabel = View.findDrawableById("gameMinute");
         if (gameMinuteLabel instanceof Text) {
-            //gameMinuteLabel.setText(formatGameMinute(, , self._timeKeeper.quarterTime()));
-            gameMinuteLabel.setText(formatGameMinute(self._timeKeeper.getCurrentQuarter(), self._timeKeeper.remainingPlayTime(), self._timeKeeper.quarterTime));
+            gameMinuteLabel.setText(formatGameMinute(self._app.getTimeKeeper().getCurrentQuarter(), self._app.getTimeKeeper().remainingPlayTime(), self._app.getTimeKeeper().quarterTime));
         }
 
-    /*
+        var penaltyClock = View.findDrawableById("penaltyClock");
+        if (penaltyClock instanceof Text) {
+            penaltyClock.setText(formatPenaltyTime(self._app.getTimeKeeper().getRemainingPenaltyCornerPreperationTime()));
+        }
+
         var timeLabel = View.findDrawableById("time");
         if (timeLabel instanceof Text) {
-            timeLabel.setText(Time.now())
+            var time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+            timeLabel.setText(Lang.format("$1$:$2$", [time.hour.format("%02d"), time.min.format("%02d")]));
         }
-        */
+
+        var heartRateLabel = View.findDrawableById("heartRate");
+        if (heartRateLabel instanceof Text) {
+            var heartRate = self._app.getCurrentHeartRate();
+            heartRateLabel.setText("HR " + heartRate);
+        }
+
+        if (self._app.getTimeKeeper().getCurrentQuarter() <= self._app.getTimeKeeper().maxQuarters) {
+            if (self._app.getTimeKeeper().isGameClockRunning()) {
+                dc.fillRectangle(122, 13, 28, 28);
+            } else {
+                dc.fillPolygon([[122,13],[150,27],[122,41]]);
+            }
+        }
+        
     }
 
     // Called when this View is removed from the screen. Save the
@@ -71,4 +97,15 @@ class hockey_umpire_watchMainView extends WatchUi.View {
     function formatGameMinute(quarter as Number, remainingPlayTime as Number, timePerQuarter as Number) as String {
         return "" + ((quarter - 1) * (timePerQuarter / 60000) + ((timePerQuarter / 60000) - (remainingPlayTime / 60000))) + " min";
     }
+
+    function formatPenaltyTime(remainingPenaltyTime as Number) as String {
+        var seconds = 0;
+        var centiseconds = 0;
+        var time = remainingPenaltyTime.toLong() / 10;
+        centiseconds = time % 100;
+        time = time / 100;
+        seconds = time % 60;
+        return seconds.format("%02d") + ":" + centiseconds.format("%02d");
+    }
+
 }

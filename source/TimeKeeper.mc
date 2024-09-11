@@ -15,6 +15,8 @@ class TimeKeeper {
     private var _penaltyCornerPreperationTimerStartTime as Number = 0;
     private var _remainingQuarterTime as Number;
     private var _quarterStartTime as Number = 0;
+    private var _breakClockStarted as Boolean = false;
+    private var _breakClockStartingTime as Number = 0;
     public const maxQuarters as Number = Properties.getValue("maxQuarters");
     public const quarterTime as Number = Properties.getValue("quarterTime") * 1000;
     public const penaltyCornerPreperationTime as Number = Properties.getValue("penaltyCornerPreperationTime") * 1000;
@@ -38,7 +40,7 @@ class TimeKeeper {
         return self._timeRunning;
     }
 
-    public function max(a as Number, b as Number) {
+    public function max(a as Number, b as Number) as Number {
         if (a > b) {
             return a;
         } else {
@@ -135,7 +137,10 @@ class TimeKeeper {
                 }
                 break;
         }
-        
+        if (!self._timeRunning && !self._penaltyCornerPreperationRunning && self._quarter <= self.maxQuarters) {
+            self._breakClockStarted = true;
+            self._breakClockStartingTime = System.getTimer();
+        }
     }
 
     public function userAlarmPlayTimeExpired() as Void {
@@ -231,6 +236,18 @@ class TimeKeeper {
         if (Attention has :playTone) {
             Attention.playTone(Attention.TONE_LOUD_BEEP);
         }
+    }
+
+    public function isBreakClockRunning() as Boolean {
+        return self._breakClockStarted;
+    }
+
+    public function stopBreakClock() as Void {
+        self._breakClockStarted = false;
+    }
+
+    public function elapsedBreakTime() as Number {
+        return System.getTimer() - self._breakClockStartingTime;
     }
 
     public function startPenaltyClock() as Void {

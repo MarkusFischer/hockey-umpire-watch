@@ -36,7 +36,11 @@ class MainView extends WatchUi.View {
         var remainingPlayTimeLabel = View.findDrawableById("remainingPlayTime");
         if (remainingPlayTimeLabel instanceof Text) {
             if (self._app.getTimeKeeper().getCurrentQuarter() <= self._app.getTimeKeeper().maxQuarters) {
-                remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().remainingPlayTime()));
+                if (self._app.getTimeKeeper().isBreakClockRunning()) {
+                    remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().elapsedBreakTime()));
+                } else {
+                    remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().remainingPlayTime()));
+                }
             } else {
                 remainingPlayTimeLabel.setFont(Graphics.FONT_SYSTEM_MEDIUM);
                 remainingPlayTimeLabel.setText("Playtime over!");

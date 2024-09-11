@@ -3,17 +3,17 @@ import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.Attention;
 
-class hockey_umpire_watchDelegate extends WatchUi.BehaviorDelegate {
+class MainInputDelegate extends WatchUi.BehaviorDelegate {
 
-    private var _app as hockey_umpire_watchApp;
+    private var _app as HockeyUmpireWatchApp;
 
-    function initialize(app as hockey_umpire_watchApp) {
+    function initialize(app as HockeyUmpireWatchApp) {
         BehaviorDelegate.initialize();
         self._app = app;
     }
 
     function onMenu() as Boolean {
-        WatchUi.pushView(new Rez.Menus.MainMenu(), new hockey_umpire_watchMenuDelegate(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new Rez.Menus.MainMenu(), new MenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
 

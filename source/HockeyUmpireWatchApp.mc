@@ -4,7 +4,7 @@ import Toybox.WatchUi;
 import Toybox.Timer;
 import Toybox.Sensor;
 
-class hockey_umpire_watchApp extends Application.AppBase {
+class HockeyUmpireWatchApp extends Application.AppBase {
 
     private var _timeKeeper as TimeKeeper;
     private var _refreshDisplayTimer as Timer.Timer;
@@ -39,7 +39,7 @@ class hockey_umpire_watchApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new hockey_umpire_watchMainView(self), new hockey_umpire_watchDelegate(self) ];
+        return [ new MainView(self), new MainInputDelegate(self) ];
     }
 
     function refreshDisplayCallback() as Void {
@@ -52,6 +52,6 @@ class hockey_umpire_watchApp extends Application.AppBase {
 
 }
 
-function getApp() as hockey_umpire_watchApp {
-    return Application.getApp() as hockey_umpire_watchApp;
+function getApp() as HockeyUmpireWatchApp {
+    return Application.getApp() as HockeyUmpireWatchApp;
 }

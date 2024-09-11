@@ -4,11 +4,11 @@ import Toybox.Lang;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
 
-class hockey_umpire_watchMainView extends WatchUi.View {
+class MainView extends WatchUi.View {
 
-    private var _app as hockey_umpire_watchApp;
+    private var _app as HockeyUmpireWatchApp;
     
-    function initialize(app as hockey_umpire_watchApp) {
+    function initialize(app as HockeyUmpireWatchApp) {
         View.initialize();
         self._app = app;
     }

@@ -3,9 +3,9 @@
    <bitmap id="id_monkey" x="center" y="30" filename="../drawables/monkey.png" />-->
     <label id="time" x="20" y="30" text="17:41" font="Graphics.FONT_SYSTEM_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
     <label id="heartRate" x="20" y="15" text="HR 120" font="Graphics.FONT_SYSTEM_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-    <label id="remainingPlayTime" x="center" y="60" text="07:34:00" font="Graphics.FONT_SYSTEM_NUMBER_HOT" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
-    <label id="quarter" x="48" y="95" text="Q3" font="Graphics.FONT_SYSTEM_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-    <label id="gameMinute" x="75" y="95" text="38 min" font="Graphics.FONT_SYSTEM_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-    <label id="penaltyClock" x="center" y="130" text="40:00" font="Graphics.FONT_SYSTEM_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+    <label id="remainingPlayTime" x="center" y="60" text="07:34:00" font="Graphics.FONT_SYSTEM_NUMBER_THAI_HOT" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+    <label id="quarter" x="48" y="105" text="Q3" font="Graphics.FONT_SYSTEM_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+    <label id="gameMinute" x="75" y="105" text="38 min" font="Graphics.FONT_SYSTEM_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+    <label id="penaltyClock" x="center" y="130" text="40:00" font="Graphics.FONT_SYSTEM_LARGE" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
     
 </layout>

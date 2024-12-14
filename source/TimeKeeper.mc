@@ -49,13 +49,14 @@ class TimeKeeper {
     }
 
     public function startGameClock() as Void {
-        if (!self._penaltyCornerPreperationRunning) {
-            self._quarterStartTime = System.getTimer();
-            self._gameTimer.start(method(:gameClockExpiredCallback), self._remainingQuarterTime, false);
-            self._timeRunning = true;
-            self._timerStatus = :gameTime;
-            System.println("Started Game clock in quarter " + _quarter + " at " + self._quarterStartTime);
+        if (self._penaltyCornerPreperationRunning) {
+            self.stopPenaltyCornerPreperationClock();
         }
+        self._quarterStartTime = System.getTimer();
+        self._gameTimer.start(method(:gameClockExpiredCallback), self._remainingQuarterTime, false);
+        self._timeRunning = true;
+        self._timerStatus = :gameTime;
+        System.println("Started Game clock in quarter " + _quarter + " at " + self._quarterStartTime);
     }
 
     public function stopGameClock() as Void {
@@ -116,6 +117,10 @@ class TimeKeeper {
                         self._timerStatus = :penaltyCornerPreperationNotification;
                     }
                 }
+                if (!self._penaltyCornerPreperationRunning && self._quarter <= self.maxQuarters) {
+                    self._breakClockStarted = true;
+                    self._breakClockStartingTime = System.getTimer();
+                }
                 System.println("Game clock expired");
                 break;
             case :penaltyCornerPreperationNotification:
@@ -136,10 +141,6 @@ class TimeKeeper {
                     self._timerStatus = :gameTime; 
                 }
                 break;
-        }
-        if (!self._timeRunning && !self._penaltyCornerPreperationRunning && self._quarter <= self.maxQuarters) {
-            self._breakClockStarted = true;
-            self._breakClockStartingTime = System.getTimer();
         }
     }
 

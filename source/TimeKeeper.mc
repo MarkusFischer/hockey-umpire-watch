@@ -162,6 +162,10 @@ class TimeKeeper {
         }
     }
 
+    public function isPenaltyCornerPreperationClockRunning() as Boolean {
+        return self._penaltyCornerPreperationRunning;
+    }
+    
     public function startPenaltyCornerPreperationClock() as Void {
         if (self._timeRunning) {
             self._penaltyCornerPreperationTimerStartTime = System.getTimer();

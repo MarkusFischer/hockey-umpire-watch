@@ -33,10 +33,13 @@ class MainView extends WatchUi.View {
         if (quarterLabel instanceof Text) {
             quarterLabel.setText("Q" + self._app.getTimeKeeper().getCurrentQuarter());
         }
+
         var remainingPlayTimeLabel = View.findDrawableById("remainingPlayTime");
         if (remainingPlayTimeLabel instanceof Text) {
             if (self._app.getTimeKeeper().getCurrentQuarter() <= self._app.getTimeKeeper().maxQuarters) {
-                if (self._app.getTimeKeeper().isBreakClockRunning()) {
+                if (self._app.getTimeKeeper().isPenaltyCornerPreperationClockRunning()) {
+                    remainingPlayTimeLabel.setText(formatPenaltyTime(self._app.getTimeKeeper().getRemainingPenaltyCornerPreperationTime()));
+                } else if (self._app.getTimeKeeper().isBreakClockRunning()) {
                     remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().elapsedBreakTime()));
                 } else {
                     remainingPlayTimeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().remainingPlayTime()));
@@ -52,15 +55,14 @@ class MainView extends WatchUi.View {
             gameMinuteLabel.setText(formatGameMinute(self._app.getTimeKeeper().getCurrentQuarter(), self._app.getTimeKeeper().remainingPlayTime(), self._app.getTimeKeeper().quarterTime));
         }
 
-        var penaltyClock = View.findDrawableById("penaltyClock");
-        if (penaltyClock instanceof Text) {
-            penaltyClock.setText(formatPenaltyTime(self._app.getTimeKeeper().getRemainingPenaltyCornerPreperationTime()));
-        }
-
         var timeLabel = View.findDrawableById("time");
         if (timeLabel instanceof Text) {
-            var time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-            timeLabel.setText(Lang.format("$1$:$2$", [time.hour.format("%02d"), time.min.format("%02d")]));
+            if (self._app.getTimeKeeper().isPenaltyCornerPreperationClockRunning()) {
+                timeLabel.setText(formatRemainingPlayTime(self._app.getTimeKeeper().remainingPlayTime()));
+            } else {
+                var time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+                timeLabel.setText(Lang.format("$1$:$2$", [time.hour.format("%02d"), time.min.format("%02d")]));
+            }
         }
 
         var heartRateLabel = View.findDrawableById("heartRate");

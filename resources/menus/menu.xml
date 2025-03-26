@@ -1,3 +1,12 @@
-<menu id="MainMenu">
-    <menu-item id="quitApp" label="Quit App" />
-</menu>
+<menus>
+    <menu id="MainMenu">
+        <menu-item id="quitApp" label="Quit App" />
+    </menu>
+    <menu2 id="SuspensionSelectionMenu" title="Select Suspension">
+        <menu-item id="greenCard" label="Green" />
+        <menu-item id="yellowCardShort" label="Yellow (5min)" />
+        <menu-item id="yellowCardMedium" label="Yellow (10min)" />
+        <menu-item id="yellowCardLong" label="Yellow (15min)" />
+        <menu-item id="yellowRedCard" label="Yellow-Red (indoor)" />
+    </menu2>
+</menus>

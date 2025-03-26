@@ -1,3 +1,5 @@
+import Toybox.Lang;
+
 class Suspension {
     private var _team as Symbol?;
     private var _card as Symbol?;

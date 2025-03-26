@@ -39,7 +39,7 @@ class HockeyUmpireWatchApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new MainView(self), new MainInputDelegate(self) ];
+        return [ new MainView(self), new MainInputDelegate(self)];
     }
 
     function refreshDisplayCallback() as Void {

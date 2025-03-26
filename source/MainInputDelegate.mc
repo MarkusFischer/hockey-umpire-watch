@@ -17,6 +17,17 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
+
+    function onPreviousPage() as Boolean {
+        WatchUi.pushView(new Rez.Menus.SuspensionSelectionMenu(), new SuspensionSelectionMenuDelegate(), WatchUi.SLIDE_UP);
+        return true;
+    }
+
+    //function onNextPage() as Boolean {
+    //    WatchUi.pushView(new PlayerPicker(), new PlayerPickerDelegate(), WatchUi.SLIDE_IMMEDIATE);
+    //    return true;
+    //}
+
     function onSelect() as Boolean {
         if (self._app.getTimeKeeper().isBreakClockRunning())
         {

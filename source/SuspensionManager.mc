@@ -1,3 +1,4 @@
+import Toybox.Lang;
 import Toybox.Math;
 
 class SuspensionManager {

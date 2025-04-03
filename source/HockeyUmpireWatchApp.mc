@@ -25,9 +25,9 @@ class HockeyUmpireWatchApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
-        self._timeKeeper = new TimeKeeper();
+        self._timeKeeper = new TimeKeeper(self);
         self._refreshDisplayTimer = new Timer.Timer();
-        self._suspensionManager = new SuspensionManager();
+        self._suspensionManager = new SuspensionManager(self);
 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         Sensor.enableSensorEvents(method(:sensorCallback));

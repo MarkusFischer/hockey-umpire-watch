@@ -1,10 +1,15 @@
 import Toybox.Lang;
 import Toybox.Math;
+import Toybox.Timer;
 
 class SuspensionManager {
 
     private var _suspensionHeap = new Array<Suspension>[32];
     private var _lastUsedSlot as Number = -1;
+    private var _app as HockeyUmpireWatchApp?;
+    private var _suspensionTimer as Timer.Timer;
+    private var _suspensionStartTime as Number = 0;
+    private var _suspensionTimerRunning as Boolean = false;
 
     private function heapParent(index as Number) as Number {
         return Math.floor(index / 2);
@@ -74,12 +79,58 @@ class SuspensionManager {
         }
     }
 
-    public function initialize() {
+    public function initialize(app as HockeyUmpireWatchApp?) {
+        self._app = app;
+        self._suspensionTimer = new Timer.Timer();
+    }
 
+    public function startSuspensionClock() {
+        if (!self.empty())
+        {
+            var suspension = self.nextExpiringSuspension();
+            self._suspensionStartTime = System.getTimer();
+            self._suspensionTimer.start(method(:suspensionClockExpiredCallback), suspension.getRemainingSuspensionTime(), false);
+            self._suspensionTimerRunning = true;
+        }
+    }
+
+    public function stopSuspensionClock() {
+        if (self._suspensionTimerRunning) {
+            self._suspensionTimer.stop();
+            self._suspensionTimerRunning = false;
+            var stopTime = System.getTimer();
+            var elapsedTime = stopTime - self._suspensionStartTime;
+            self.heapDecreaseAll(elapsedTime);
+            self.checkSuspensionsForValidity();
+        }
+    }
+
+    public function checkSuspensionsForValidity() {
+        while (!self.empty() && self.nextExpiringSuspension().getRemainingSuspensionTime() <= 0) {
+            var expiredSuspension = self.heapExtractMin();
+            // TODO notify user
+        }
+    }
+
+    public function suspensionClockExpiredCallback() as Void {
+        System.println("Suspension Expired!");
+        self._suspensionTimerRunning = false;
+        var stopTime = System.getTimer();
+        var elapsedTime = stopTime - self._suspensionStartTime;
+        self.heapDecreaseAll(elapsedTime);
+        self.checkSuspensionsForValidity();
+        
+        if (!self.empty()) {
+            self.startSuspensionClock();
+        }
     }
 
     public function insertSuspension(suspension as Suspension) {
+        self.stopSuspensionClock();
         self.heapInsert(suspension);
+        if (self._app.getTimeKeeper().isGameClockRunning()) {
+            self.startSuspensionClock();
+        }
     } 
 
     public function empty() as Boolean {

@@ -17,13 +17,16 @@ class TimeKeeper {
     private var _quarterStartTime as Number = 0;
     private var _breakClockStarted as Boolean = false;
     private var _breakClockStartingTime as Number = 0;
+    private var _app as HockeyUmpireWatchApp?;
+
     public const maxQuarters as Number = Properties.getValue("maxQuarters");
     public const quarterTime as Number = Properties.getValue("quarterTime") * 1000;
     public const penaltyCornerPreperationTime as Number = Properties.getValue("penaltyCornerPreperationTime") * 1000;
     public const penaltyCornerPreperationNotificationTime as Number = Properties.getValue("penaltyCornerPreperationNotificationTime") * 1000;
 
 
-    function initialize() {
+    function initialize(app as HockeyUmpireWatchApp?) {
+        self._app = app;
         self._gameTimer = new Timer.Timer();
         self._remainingQuarterTime = quarterTime;
 
@@ -56,6 +59,7 @@ class TimeKeeper {
         self._gameTimer.start(method(:gameClockExpiredCallback), self._remainingQuarterTime, false);
         self._timeRunning = true;
         self._timerStatus = :gameTime;
+        self._app.getSuspensionManager().startSuspensionClock();
         System.println("Started Game clock in quarter " + _quarter + " at " + self._quarterStartTime);
     }
 
@@ -67,6 +71,7 @@ class TimeKeeper {
         if (self._penaltyCornerPreperationRunning) {
             if (self._timerStatus == :gameTime) {
                 self._gameTimer.stop();
+                self._app.getSuspensionManager().stopSuspensionClock();
                 var elapsedPenaltyCornerPreperationTime = System.getTimer() - _penaltyCornerPreperationTimerStartTime;
                 if (elapsedPenaltyCornerPreperationTime > self.penaltyCornerPreperationNotificationTime) {
                     self._gameTimer.start(method(:gameClockExpiredCallback), self.penaltyCornerPreperationTime - elapsedPenaltyCornerPreperationTime, false);

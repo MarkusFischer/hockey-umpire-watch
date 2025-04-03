@@ -81,4 +81,12 @@ class SuspensionManager {
     public function insertSuspension(suspension as Suspension) {
         self.heapInsert(suspension);
     } 
+
+    public function empty() as Boolean {
+        return self._lastUsedSlot == -1;
+    }
+
+    public function nextExpiringSuspension() as Suspension? {
+        return self._suspensionHeap[0];
+    }
 }

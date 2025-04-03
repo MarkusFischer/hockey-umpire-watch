@@ -3,10 +3,12 @@ import Toybox.WatchUi;
 
 class PlayerPickerDelegate extends WatchUi.PickerDelegate {
     private var _card as Symbol?;
+    private var _app as HockeyUmpireWatchApp?;
 
-    public function initialize(card as Symbol?) {
-        PickerDelegate.initialize();
+    public function initialize(card as Symbol?, app as HockeyUmpireWatchApp?) {
         _card = card;
+        _app = app;
+        PickerDelegate.initialize();
     }
 
     public function onCancel() as Boolean {
@@ -18,28 +20,15 @@ class PlayerPickerDelegate extends WatchUi.PickerDelegate {
     //! @param values The values chosen in the picker
     //! @return true if handled, false otherwise
     public function onAccept(values as Array) as Boolean {
-        System.println("Picker accept");
-        System.println("Card");
-        if (_card == :greenCard) {
-            System.println("Green");
+        var team;
+        if (values[0].equals("H")) {
+            team = :homeTeam;
+        } else {
+            team = :awayTeam;
         }
-        if (_card == :yellowCardShort) {
-            System.println("Yellow (5min)");
-        }
-        if (_card == :yellowCardMedium) {
-            System.println("Yellow (10min)");
-        }
-        if (_card == :yellowCardLong) {
-            System.println("Yellow (15min)");
-        }
-        if (_card == :yellowRedCard) {
-            System.println("YellowRed");
-        }
-        System.println("Team");
-        System.println(values[0]);
-        System.println("Player Nr");
-        System.println(values[1]);
-        System.println(values[2]);
+        System.println(team);
+        var suspension = new Suspension(team, self._card, values[1] * 10 + values[2]);
+        self._app.getSuspensionManager().insertSuspension(suspension);
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         return true;
     }

@@ -19,7 +19,7 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
 
 
     function onPreviousPage() as Boolean {
-        WatchUi.pushView(new Rez.Menus.SuspensionSelectionMenu(), new SuspensionSelectionMenuDelegate(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new Rez.Menus.SuspensionSelectionMenu(), new SuspensionSelectionMenuDelegate(self._app), WatchUi.SLIDE_UP);
         return true;
     }
 

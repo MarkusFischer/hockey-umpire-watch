@@ -78,7 +78,40 @@ class MainView extends WatchUi.View {
                 dc.fillPolygon([[122,13],[150,27],[122,41]]);
             }
         }
+
+        var nextExpiringSuspensionTeamLabel = View.findDrawableById("nextExpiringSuspensionTeam");
+        if (nextExpiringSuspensionTeamLabel instanceof Text) {
+            if (self._app.getSuspensionManager().empty()) {
+                nextExpiringSuspensionTeamLabel.setText("-");
+            } else {
+                var nextExpiringSuspension = self._app.getSuspensionManager().nextExpiringSuspension();
+                if (nextExpiringSuspension.getTeam() == :homeTeam) {
+                    nextExpiringSuspensionTeamLabel.setText("H");
+                } else {
+                    nextExpiringSuspensionTeamLabel.setText("G");
+                }
+            }
+        }
         
+        var nextExpiringSuspensionPlayerLabel = View.findDrawableById("nextExpiringSuspensionPlayer");
+        if (nextExpiringSuspensionPlayerLabel instanceof Text) {
+            if (self._app.getSuspensionManager().empty()) {
+                nextExpiringSuspensionPlayerLabel.setText("--");
+            } else {
+                var nextExpiringSuspension = self._app.getSuspensionManager().nextExpiringSuspension();
+                nextExpiringSuspensionPlayerLabel.setText("" + nextExpiringSuspension.getPlayerNumber());
+            }
+        }
+
+        var nextExpiringSuspensionTimeLabel = View.findDrawableById("nextExpiringSuspensionTime");
+        if (nextExpiringSuspensionTimeLabel instanceof Text) {
+            if (self._app.getSuspensionManager().empty()) {
+                nextExpiringSuspensionTimeLabel.setText("--:--");
+            } else {
+                var nextExpiringSuspension = self._app.getSuspensionManager().nextExpiringSuspension();
+                nextExpiringSuspensionTimeLabel.setText(formatRemainingSuspensionTime(nextExpiringSuspension.getRemainingSuspensionTime()));
+            }
+        }
     }
 
     // Called when this View is removed from the screen. Save the
@@ -112,6 +145,16 @@ class MainView extends WatchUi.View {
         time = time / 100;
         seconds = time % 60;
         return seconds.format("%02d") + ":" + centiseconds.format("%02d");
+    }
+
+    function formatRemainingSuspensionTime(remainingSuspensionTime as Number) as String {
+        var minutes = 0;
+        var seconds = 0;
+        var time = remainingSuspensionTime.toLong() / 1000;
+        seconds = time % 60;
+        time = time / 60;
+        minutes = time;
+        return minutes.format("%02d") + ":" + seconds.format("%02d");
     }
 
 }

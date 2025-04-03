@@ -4,12 +4,15 @@ import Toybox.WatchUi;
 
 class SuspensionSelectionMenuDelegate extends WatchUi.Menu2InputDelegate {
 
-    function initialize() {
+    private var _app as HockeyUmpireWatchApp?;
+
+    function initialize(app as HockeyUmpireWatchApp?) {
+        self._app = app;
         Menu2InputDelegate.initialize();
     }
 
     function onSelect(item as WatchUi.MenuItem) as Void {
-        WatchUi.switchToView(new PlayerPicker(), new PlayerPickerDelegate(item.getId()), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.switchToView(new PlayerPicker(), new PlayerPickerDelegate(item.getId(), _app), WatchUi.SLIDE_IMMEDIATE);
         
     }
 

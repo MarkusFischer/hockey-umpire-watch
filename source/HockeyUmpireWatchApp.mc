@@ -9,6 +9,7 @@ class HockeyUmpireWatchApp extends Application.AppBase {
     private var _timeKeeper as TimeKeeper;
     private var _refreshDisplayTimer as Timer.Timer;
     private var _currentHeartRate as Number = 0;
+    private var _suspensionManager as SuspensionManager;
 
     function getCurrentHeartRate() as Number {
         return self._currentHeartRate;
@@ -18,10 +19,15 @@ class HockeyUmpireWatchApp extends Application.AppBase {
         return self._timeKeeper;
     }
 
+    function getSuspensionManager() as SuspensionManager? {
+        return self._suspensionManager;
+    }
+
     function initialize() {
         AppBase.initialize();
         self._timeKeeper = new TimeKeeper();
         self._refreshDisplayTimer = new Timer.Timer();
+        self._suspensionManager = new SuspensionManager();
 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         Sensor.enableSensorEvents(method(:sensorCallback));

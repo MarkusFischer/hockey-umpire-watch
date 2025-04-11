@@ -12,8 +12,7 @@ class SuspensionSelectionMenuDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     function onSelect(item as WatchUi.MenuItem) as Void {
-        WatchUi.switchToView(new PlayerPicker(), new PlayerPickerDelegate(item.getId(), _app), WatchUi.SLIDE_IMMEDIATE);
-        
+        WatchUi.pushView(new PlayerPicker(), new PlayerPickerDelegate(item.getId(), _app), WatchUi.SLIDE_IMMEDIATE);   
     }
 
 }

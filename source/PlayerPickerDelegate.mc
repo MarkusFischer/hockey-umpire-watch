@@ -30,6 +30,7 @@ class PlayerPickerDelegate extends WatchUi.PickerDelegate {
         var suspension = new Suspension(team, self._card, values[1] * 10 + values[2]);
         self._app.getSuspensionManager().insertSuspension(suspension);
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         return true;
     }
 }

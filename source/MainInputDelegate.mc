@@ -23,10 +23,10 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    //function onNextPage() as Boolean {
-    //    WatchUi.pushView(new PlayerPicker(), new PlayerPickerDelegate(), WatchUi.SLIDE_IMMEDIATE);
-    //    return true;
-    //}
+    /*function onNextPage() as Boolean {
+        WatchUi.pushView(new SuspensionExpiredAlertView(), new SuspensionExpiredAlertDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
+        return true;
+    }*/
 
     function onSelect() as Boolean {
         if (self._app.getTimeKeeper().isBreakClockRunning())

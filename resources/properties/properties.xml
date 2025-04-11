@@ -4,4 +4,10 @@
     <property id="penaltyCornerPreperationTime" type="long">40</property>
     <property id="penaltyCornerPreperationNotificationTime" type="long">30</property>
     <property id="displayRefreshRate" type="number">100</property>
+    <property id="suspensionExpiredAlertShowTime" type="number">3000</property>
+    <property id="greenCardSuspensionTime" type="number">120</property>
+    <property id="yellowCardShortSuspensionTime" type="number">300</property>
+    <property id="yellowCardMediumSuspensionTime" type="number">600</property>
+    <property id="yellowCardLongSuspensionTime" type="number">900</property>
+    <property id="yellowRedCardSuspensionTime" type="number">900</property>
 </properties>

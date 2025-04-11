@@ -56,6 +56,44 @@ class HockeyUmpireWatchApp extends Application.AppBase {
         self._currentHeartRate = sensorInfo.heartRate;
     }
 
+    function notifyUserPlayTimeEvent(event as Symbol) as Void {
+        var vibeProfiles = {:playTimeExpired => [new Attention.VibeProfile(100, 1000), 
+                                                 new Attention.VibeProfile(0, 500), 
+                                                 new Attention.VibeProfile(100, 1000)],
+                            :penaltyCornerPreperationNotificationExpired => [new Attention.VibeProfile(75, 750)],
+                            :penaltyCornerPreperationExpired => [new Attention.VibeProfile(100, 1500)],};
+
+        var tones = {:playTimeExpired => Attention.TONE_TIME_ALERT,
+                     :penaltyCornerPreperationNotificationExpired => Attention.TONE_KEY,
+                     :penaltyCornerPreperationExpired => Attention.TONE_LOUD_BEEP};
+
+        if (Attention has :vibrate) {
+            Attention.vibrate(vibeProfiles[event]);
+        }
+
+        if (Attention has :playTone) {
+            Attention.playTone(tones[event]);
+        }
+    }
+
+    function notifyUserSuspensionExpired(suspension as Suspension) {
+
+        WatchUi.pushView(new SuspensionExpiredAlertView(self, suspension), new SuspensionExpiredAlertDelegate(), WatchUi.SLIDE_IMMEDIATE);
+
+        var vibeProfile = [new Attention.VibeProfile(80, 250), 
+                           new Attention.VibeProfile(0, 250), 
+                           new Attention.VibeProfile(80, 250),
+                           new Attention.VibeProfile(0, 250), 
+                           new Attention.VibeProfile(80, 250),];
+        if (Attention has :vibrate) {
+            Attention.vibrate(vibeProfile);
+        }
+
+        if (Attention has :playTone) {
+            Attention.playTone(Attention.TONE_ALERT_LO);
+        }
+    }
+
 }
 
 function getApp() as HockeyUmpireWatchApp {

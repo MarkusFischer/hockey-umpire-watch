@@ -1,4 +1,5 @@
 import Toybox.Lang;
+import Toybox.Application;
 
 class Suspension {
     private var _team as Symbol?;
@@ -7,27 +8,25 @@ class Suspension {
     private var _remainingSuspensionTime as Number = 0;
 
     public function initialize(team as Symbol?, card as Symbol?, playerNumber as Number) {
-        System.println("New Suspension created!");
         self._team = team;
         self._card = card;
         self._playerNumber = playerNumber;
 
-        // TODO make starting suspension time configurable
         switch (self._card) {
             case :greenCard:
-                self._remainingSuspensionTime = 120;
+                self._remainingSuspensionTime = Properties.getValue("greenCardSuspensionTime");
                 break;
             case :yellowCardShort:
-                self._remainingSuspensionTime = 300;
+                self._remainingSuspensionTime = Properties.getValue("yellowCardShortSuspensionTime");
                 break;
             case :yellowCardMedium:
-                self._remainingSuspensionTime = 600;
+                self._remainingSuspensionTime = Properties.getValue("yellowCardMediumSuspensionTime");
                 break;
             case :yellowCardLong:
-                self._remainingSuspensionTime = 900;
+                self._remainingSuspensionTime = Properties.getValue("yellowCardLongSuspensionTime");
                 break;
             case :yellowRedCard:
-                self._remainingSuspensionTime = 900;
+                self._remainingSuspensionTime = Properties.getValue("yellowRedCardSuspensionTime");
                 break;
             default:
                 self._remainingSuspensionTime = 0;

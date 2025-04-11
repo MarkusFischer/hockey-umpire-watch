@@ -102,13 +102,23 @@ class SuspensionManager {
             var elapsedTime = stopTime - self._suspensionStartTime;
             self.heapDecreaseAll(elapsedTime);
             self.checkSuspensionsForValidity();
+            System.println("Stop Suspension Clock!");
         }
     }
 
     public function checkSuspensionsForValidity() {
         while (!self.empty() && self.nextExpiringSuspension().getRemainingSuspensionTime() <= 0) {
             var expiredSuspension = self.heapExtractMin();
-            // TODO notify user
+            self._app.notifyUserSuspensionExpired(expiredSuspension);
+        }
+    }
+
+    public function suspensionExpiredTime() as Number {
+        if (self._suspensionTimerRunning)
+        {
+            return System.getTimer() - self._suspensionStartTime;
+        } else {
+            return 0;
         }
     }
 
@@ -122,6 +132,8 @@ class SuspensionManager {
         
         if (!self.empty()) {
             self.startSuspensionClock();
+        } else {
+            self._suspensionStartTime = 0;
         }
     }
 

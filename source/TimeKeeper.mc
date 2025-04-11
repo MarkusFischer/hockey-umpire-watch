@@ -68,10 +68,10 @@ class TimeKeeper {
         var quarterStopTime = System.getTimer();
         var elapsedTime = quarterStopTime - self._quarterStartTime;
         self._remainingQuarterTime -= elapsedTime;
+        self._app.getSuspensionManager().stopSuspensionClock();
         if (self._penaltyCornerPreperationRunning) {
             if (self._timerStatus == :gameTime) {
                 self._gameTimer.stop();
-                self._app.getSuspensionManager().stopSuspensionClock();
                 var elapsedPenaltyCornerPreperationTime = System.getTimer() - _penaltyCornerPreperationTimerStartTime;
                 if (elapsedPenaltyCornerPreperationTime > self.penaltyCornerPreperationNotificationTime) {
                     self._gameTimer.start(method(:gameClockExpiredCallback), self.penaltyCornerPreperationTime - elapsedPenaltyCornerPreperationTime, false);
@@ -111,7 +111,7 @@ class TimeKeeper {
                 self._timeRunning = false;  
                 self._remainingQuarterTime = self.quarterTime;
                 self._quarter += 1;
-                self.userAlarmPlayTimeExpired();
+                self._app.notifyUserPlayTimeEvent(:playTimeExpired);
                 if (self._penaltyCornerPreperationRunning) {
                     var elapsedPenaltyCornerPreperationTime = System.getTimer() - self._penaltyCornerPreperationTimerStartTime;
                     if (elapsedPenaltyCornerPreperationTime > self.penaltyCornerPreperationNotificationTime) {
@@ -125,11 +125,12 @@ class TimeKeeper {
                 if (!self._penaltyCornerPreperationRunning && self._quarter <= self.maxQuarters) {
                     self._breakClockStarted = true;
                     self._breakClockStartingTime = System.getTimer();
+                    self._app.getSuspensionManager().stopSuspensionClock();
                 }
                 System.println("Game clock expired");
                 break;
             case :penaltyCornerPreperationNotification:
-                self.userAlarmPenaltyCornerPreperationNotification();
+                self._app.notifyUserPlayTimeEvent(:penaltyCornerPreperationNotificationExpired);
                 if (self._timeRunning && self.remainingPlayTime() <= (self.penaltyCornerPreperationTime - self.penaltyCornerPreperationNotificationTime)) {
                     self._gameTimer.start(method(:gameClockExpiredCallback), self.remainingPlayTime(), false);
                     self._timerStatus = :gameTime;
@@ -139,7 +140,7 @@ class TimeKeeper {
                 }
                 break;
             case :penaltyCornerPreperation:
-                self.userAlarmPenaltyCornerPreperationExpired();
+                self._app.notifyUserPlayTimeEvent(:penaltyCornerPreperationExpired);
                 self._penaltyCornerPreperationRunning = false;
                 if (self._timeRunning) {
                     self._gameTimer.start(method(:gameClockExpiredCallback), self.remainingPlayTime(), false);
@@ -149,24 +150,7 @@ class TimeKeeper {
         }
     }
 
-    public function userAlarmPlayTimeExpired() as Void {
-        //TODO Move attention seeking out of Time keeper
-
-        if (Attention has :vibrate) {
-            var vibeProfile = 
-            [
-                new Attention.VibeProfile(100, 1000), 
-                new Attention.VibeProfile(0, 500), 
-                new Attention.VibeProfile(100, 1000)
-            ];
-            Attention.vibrate(vibeProfile);
-        }
-
-        if (Attention has :playTone) {
-            Attention.playTone(Attention.TONE_TIME_ALERT);
-        }
-    }
-
+    
     public function isPenaltyCornerPreperationClockRunning() as Boolean {
         return self._penaltyCornerPreperationRunning;
     }
@@ -217,34 +201,6 @@ class TimeKeeper {
             return self.penaltyCornerPreperationTime - currentlyElapsedTime;
         } else {
             return self.penaltyCornerPreperationTime;
-        }
-    }
-
-    public function userAlarmPenaltyCornerPreperationNotification() as Void {
-        //TODO Move attention seeking out of Time keeper
-
-        if (Attention has :vibrate) {
-            var vibeProfile = 
-            [
-                new Attention.VibeProfile(75, 750), 
-            ];
-            Attention.vibrate(vibeProfile);
-        }
-    }
-
-    public function userAlarmPenaltyCornerPreperationExpired() as Void {
-        //TODO Move attention seeking out of Time keeper
-
-        if (Attention has :vibrate) {
-            var vibeProfile = 
-            [
-                new Attention.VibeProfile(100, 1500), 
-            ];
-            Attention.vibrate(vibeProfile);
-        }
-
-        if (Attention has :playTone) {
-            Attention.playTone(Attention.TONE_LOUD_BEEP);
         }
     }
 

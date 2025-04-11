@@ -22,6 +22,7 @@ class MainView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
+        View.onShow();
     }
 
     // Update the view
@@ -109,7 +110,7 @@ class MainView extends WatchUi.View {
                 nextExpiringSuspensionTimeLabel.setText("--:--");
             } else {
                 var nextExpiringSuspension = self._app.getSuspensionManager().nextExpiringSuspension();
-                nextExpiringSuspensionTimeLabel.setText(formatRemainingSuspensionTime(nextExpiringSuspension.getRemainingSuspensionTime()));
+                nextExpiringSuspensionTimeLabel.setText(formatRemainingSuspensionTime(nextExpiringSuspension.getRemainingSuspensionTime() - self._app.getSuspensionManager().suspensionExpiredTime()));
             }
         }
     }

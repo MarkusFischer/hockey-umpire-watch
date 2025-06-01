@@ -1,14 +1,40 @@
 <settings>
-    <setting propertyKey="@Properties.maxQuarters" title="maxQuarters">
-        <settingConfig type="numeric" min="1" max="4" />
-    </setting>
-    <setting propertyKey="@Properties.quarterTime" title="quarterTime">
-        <settingConfig type="numeric" min="0" />
-    </setting>
-    <setting propertyKey="@Properties.penaltyCornerPreperationTime" title="penaltyCornerPreperationTime">
-        <settingConfig type="numeric" min="0" />
-    </setting>
-    <setting propertyKey="@Properties.penaltyCornerPreperationNotificationTime" title="penaltyCornerPreperationNotificationTime">
-        <settingConfig type="numeric" min="0" />
-    </setting>
+    <group id="quarterSettings" title="@Strings.settings_quarterSettings">
+        <setting propertyKey="@Properties.maxQuarters" title="@Strings.settings_quarterSettings_maxQuarters">
+            <settingConfig type="numeric" min="1" max="4" />
+        </setting>
+        <setting propertyKey="@Properties.quarterTime" title="@Strings.settings_quarterSettings_quarterTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+    </group>
+    <group id="penaltyCornerSettings" title="@Strings.settings_penaltyCornerSettings">
+        <setting propertyKey="@Properties.penaltyCornerPreperationTime" title="@Strings.settings_penaltyCornerSettings_penaltyCornerPreperationTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+        <setting propertyKey="@Properties.penaltyCornerPreperationNotificationTime" title="@Strings.settings_penaltyCornerSettings_penaltyCornerPreperationNotificationTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+    </group>
+    <group id="suspensionSettings" title="@Strings.settings_suspensionSettings">
+        <setting propertyKey="@Properties.greenCardSuspensionTime" title="@Strings.settings_suspensionSettings_greenCardSuspensionTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+        <setting propertyKey="@Properties.yellowCardShortSuspensionTime" title="@Strings.settings_suspensionSettings_yellowCardShortSuspensionTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+        <setting propertyKey="@Properties.yellowCardMediumSuspensionTime" title="@Strings.settings_suspensionSettings_yellowCardMediumSuspensionTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+        <setting propertyKey="@Properties.yellowCardLongSuspensionTime" title="@Strings.settings_suspensionSettings_yellowCardLongSuspensionTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+        <setting propertyKey="@Properties.yellowRedCardRefill" title="@Strings.settings_suspensionSettings_yellowRedCardRefill">
+            <settingConfig type="boolean" />
+        </setting>
+    </group>
+    <group id="yellowRedCardRefill" title="@Strings.settings_suspensionSettings_yellowRedCardRefill" enableIfTrue="@Properties.yellowRedCardRefill">
+        <setting propertyKey="@Properties.yellowRedCardSuspensionTime" title="@Strings.settings_suspensionSettings_yellowRedCardSuspensionTime">
+            <settingConfig type="numeric" min="0" />
+        </setting>
+    </group>
 </settings>

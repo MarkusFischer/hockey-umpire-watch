@@ -1,6 +1,6 @@
 <properties>
     <property id="maxQuarters" type="long">4</property>
-    <property id="quarterTime" type="long">900</property> <!--TODO replace with actual value-->
+    <property id="quarterTime" type="long">900</property>
     <property id="penaltyCornerPreperationTime" type="long">40</property>
     <property id="penaltyCornerPreperationNotificationTime" type="long">30</property>
     <property id="displayRefreshRate" type="number">100</property>
@@ -9,5 +9,6 @@
     <property id="yellowCardShortSuspensionTime" type="number">300</property>
     <property id="yellowCardMediumSuspensionTime" type="number">600</property>
     <property id="yellowCardLongSuspensionTime" type="number">900</property>
+    <property id="yellowRedCardRefill" type="boolean">false</property>
     <property id="yellowRedCardSuspensionTime" type="number">900</property>
 </properties>

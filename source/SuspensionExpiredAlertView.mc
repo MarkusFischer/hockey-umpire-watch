@@ -33,19 +33,19 @@ class SuspensionExpiredAlertView extends WatchUi.View {
             switch (_suspension.getCard())
             {
             case :greenCard:
-                suspensionTypeLabel.setText("Green");
+                suspensionTypeLabel.setText(Rez.Strings.suspensionExpiredLayout_greenCard);
                 break;
             case :yellowCardShort:
-                suspensionTypeLabel.setText("Yellow (5 min)");
+                suspensionTypeLabel.setText(Rez.Strings.suspensionExpiredLayout_yellowCardShort);
                 break;
             case :yellowCardMedium:
-                suspensionTypeLabel.setText("Yellow (10 min)");
+                suspensionTypeLabel.setText(Rez.Strings.suspensionExpiredLayout_yellowCardMedium);
                 break;
             case :yellowCardLong:
-                suspensionTypeLabel.setText("Yellow (15 min)");
+                suspensionTypeLabel.setText(Rez.Strings.suspensionExpiredLayout_yellowCardLong);
                 break;
             case :yellowRedCard:
-                suspensionTypeLabel.setText("YellowRed");
+                suspensionTypeLabel.setText(Rez.Strings.suspensionExpiredLayout_yellowRedCard);
                 break;
             }
         }

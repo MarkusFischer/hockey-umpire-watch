@@ -47,7 +47,7 @@ class MainView extends WatchUi.View {
                 }
             } else {
                 remainingPlayTimeLabel.setFont(Graphics.FONT_SYSTEM_MEDIUM);
-                remainingPlayTimeLabel.setText("Playtime over!");
+                remainingPlayTimeLabel.setText(Rez.Strings.mainLayout_playtimeExpired);
             }
             
         }

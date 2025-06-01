@@ -1,0 +1,38 @@
+<strings>
+    <string id="AppName">Hockey Schiedsrichter Uhr</string>
+
+    <string id="menu_quitApp">App beenden.</string>
+
+    <string id="suspensionMenu_selectSuspension">Strafe auswählen.</string>
+    <string id="suspensionMenu_greenCard">grüne Karte</string>
+    <string id="suspensionMenu_yellowCardShort">kurze gelbe Karte</string>
+    <string id="suspensionMenu_yellowCardMedium">mittlere gelbe Karte</string>
+    <string id="suspensionMenu_yellowCardLong">lange gelbe Karte</string>
+    <string id="suspensionMenu_yellowRedCard">gelb-rote Karte</string>
+    
+    <string id="mainLayout_nextExpiringSuspension">Ablaufende Karte:</string>
+    <string id="mainLayout_playtimeExpired">Spielzeit vorbei!</string>
+    
+    <string id="suspensionExpiredLayout_suspensionExpired">Strafe abgelaufen!</string>
+    <string id="suspensionExpiredLayout_greenCard">Grün</string>
+    <string id="suspensionExpiredLayout_yellowCardShort">kurze Gelbe</string>
+    <string id="suspensionExpiredLayout_yellowCardMedium">mittelere Gelbe</string>
+    <string id="suspensionExpiredLayout_yellowCardLong">lange Gelbe</string>
+    <string id="suspensionExpiredLayout_yellowRedCard">Gelb-Rot</string>
+
+    <string id="playerPickerLayout_title">Spieler wählen</string>
+
+    <string id="settings_quarterSettings">Spielzeiteinstellungen</string>
+    <string id="settings_quarterSettings_maxQuarters">Anzahl an Abschnitten</string>
+    <string id="settings_quarterSettings_quarterTime">Zeit pro Abschnitt (s)</string>
+    <string id="settings_penaltyCornerSettings">Strafecken</string>
+    <string id="settings_penaltyCornerSettings_penaltyCornerPreperationTime">Vorbereitungszeit für KE (s)</string>
+    <string id="settings_penaltyCornerSettings_penaltyCornerPreperationNotificationTime">Benachrichtigungszeit für KE (s)</string>
+    <string id="settings_suspensionSettings">Persönliche Strafen</string>
+    <string id="settings_suspensionSettings_greenCardSuspensionTime">Strafzeit grüne Karte (s)</string>
+    <string id="settings_suspensionSettings_yellowCardShortSuspensionTime">Strafzeit kurze gelbe Karte (s)</string>
+    <string id="settings_suspensionSettings_yellowCardMediumSuspensionTime">Strafzeit mittlere gelbe Karte (s)</string>
+    <string id="settings_suspensionSettings_yellowCardLongSuspensionTime">Strafzeit lange gelbe Karte (s)</string>
+    <string id="settings_suspensionSettings_yellowRedCardRefill">Nach gelb-roter Karte wieder auffüllen?</string>
+    <string id="settings_suspensionSettings_yellowRedCardSuspensionTime">Wiederauffüllzeit gelb-rote Karte (s)</string>
+</strings>

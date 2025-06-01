@@ -22,17 +22,17 @@
 
     <string id="playerPickerLayout_title">Choose player</string>
 
-    <string id="settings_quarterSettings">periode settings</string>
-    <string id="settings_quarterSettings_maxQuarters">no. of periods</string>
-    <string id="settings_quarterSettings_quarterTime">time per period (s)</string>
-    <string id="settings_penaltyCornerSettings">penalty corner settings</string>
+    <string id="settings_quarterSettings">Periode settings</string>
+    <string id="settings_quarterSettings_maxQuarters">No. of periods</string>
+    <string id="settings_quarterSettings_quarterTime">Time per period (s)</string>
+    <string id="settings_penaltyCornerSettings">Penalty corner settings</string>
     <string id="settings_penaltyCornerSettings_penaltyCornerPreperationTime">PC preperation time (s)</string>
     <string id="settings_penaltyCornerSettings_penaltyCornerPreperationNotificationTime">PC notification time (s)</string>
-    <string id="settings_suspensionSettings">suspension settings</string>
-    <string id="settings_suspensionSettings_greenCardSuspensionTime">green card suspension time (s)</string>
-    <string id="settings_suspensionSettings_yellowCardShortSuspensionTime">yellow card short suspension time (s)</string>
-    <string id="settings_suspensionSettings_yellowCardMediumSuspensionTime">yellow card medium suspension time (s)</string>
-    <string id="settings_suspensionSettings_yellowCardLongSuspensionTime">yellow card long suspension time (s)</string>
-    <string id="settings_suspensionSettings_yellowRedCardRefill">allow refill after yellow-red card</string>
-    <string id="settings_suspensionSettings_yellowRedCardSuspensionTime">yellow-red card refill time (s)</string>
+    <string id="settings_suspensionSettings">Suspension settings</string>
+    <string id="settings_suspensionSettings_greenCardSuspensionTime">Green card suspension time (s)</string>
+    <string id="settings_suspensionSettings_yellowCardShortSuspensionTime">Yellow card short suspension time (s)</string>
+    <string id="settings_suspensionSettings_yellowCardMediumSuspensionTime">Yellow card medium suspension time (s)</string>
+    <string id="settings_suspensionSettings_yellowCardLongSuspensionTime">Yellow card long suspension time (s)</string>
+    <string id="settings_suspensionSettings_yellowRedCardRefill">Allow refill after yellow-red card?</string>
+    <string id="settings_suspensionSettings_yellowRedCardSuspensionTime">Yellow-red card refill time (s)</string>
 </strings>

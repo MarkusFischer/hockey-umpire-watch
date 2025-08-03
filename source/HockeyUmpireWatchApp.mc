@@ -78,7 +78,7 @@ class HockeyUmpireWatchApp extends Application.AppBase {
 
     function notifyUserSuspensionExpired(suspension as Suspension) {
 
-        WatchUi.pushView(new SuspensionExpiredAlertView(self, suspension), new SuspensionExpiredAlertDelegate(), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.pushView(new SuspensionExpiredAlertView(suspension), new SuspensionExpiredAlertDelegate(), WatchUi.SLIDE_IMMEDIATE);
 
         var vibeProfile = [new Attention.VibeProfile(80, 250), 
                            new Attention.VibeProfile(0, 250), 

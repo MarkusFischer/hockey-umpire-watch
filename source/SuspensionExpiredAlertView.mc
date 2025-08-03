@@ -9,13 +9,11 @@ class SuspensionExpiredAlertView extends WatchUi.View {
 
     private var _suspension as Suspension;
     private var _viewShowTime as Number;
-    private var _app as HockeyUmpireWatchApp;
     
-    function initialize(app as HockeyUmpireWatchApp, suspension as Suspension) {
+    function initialize(suspension as Suspension) {
         View.initialize();
         _suspension = suspension;
         _viewShowTime = 0;
-        _app = app;
     }
 
     // Load your resources here

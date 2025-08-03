@@ -23,17 +23,12 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    /*function onNextPage() as Boolean {
-        WatchUi.pushView(new SuspensionExpiredAlertView(), new SuspensionExpiredAlertDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
-        return true;
-    }*/
-
     function onSelect() as Boolean {
-        if (self._app.getTimeKeeper().isBreakClockRunning())
-        {
+        if (self._app.getTimeKeeper().isBreakClockRunning()) {
             self._app.getTimeKeeper().stopBreakClock();
             return true;
         }
+        
         if (self._app.getTimeKeeper().getCurrentQuarter() <= self._app.getTimeKeeper().maxQuarters) {
             self._app.getTimeKeeper().toggleGameClock();
             if (Attention has :vibrate) {

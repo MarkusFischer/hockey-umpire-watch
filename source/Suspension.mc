@@ -1,6 +1,11 @@
 import Toybox.Lang;
 import Toybox.Application;
 
+
+//! Container class for a player suspension. Stores the team and player number of the suspended player. 
+//! Additional the given card and the remaining suspension time is stored. 
+//! Getter methods for all data fields are supplied and additionally a method to update the remaining suspension time.
+//! Attention: Suspension time is not updated automatically.   
 class Suspension {
     private var _team as Symbol?;
     private var _card as Symbol?;
@@ -12,6 +17,8 @@ class Suspension {
         self._card = card;
         self._playerNumber = playerNumber;
 
+        // The suspension time for a given card is not arbitrarily but determined by the rules. 
+        // Since there are differences between indoor and outdoor hockey load the values from the settings.
         switch (self._card) {
             case :greenCard:
                 self._remainingSuspensionTime = Properties.getValue("greenCardSuspensionTime");

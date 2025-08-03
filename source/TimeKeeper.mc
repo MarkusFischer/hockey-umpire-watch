@@ -9,8 +9,6 @@ class TimeKeeper {
     private var _timeRunning as Boolean = false;
     private var _gameTimer as Timer.Timer;
     private var _timerStatus as Symbol?;
-    private var _penaltyCornerPreperationTimer as Timer.Timer;
-    private var _penaltyCornerPreperationNotificationTimer as Timer.Timer;
     private var _penaltyCornerPreperationRunning as Boolean = false;
     private var _penaltyCornerPreperationTimerStartTime as Number = 0;
     private var _remainingQuarterTime as Number;
@@ -29,10 +27,6 @@ class TimeKeeper {
         self._app = app;
         self._gameTimer = new Timer.Timer();
         self._remainingQuarterTime = quarterTime;
-
-        self._penaltyCornerPreperationNotificationTimer = new Timer.Timer();
-        self._penaltyCornerPreperationTimer = new Timer.Timer();
-
     }
 
     public function getCurrentQuarter() as Number {

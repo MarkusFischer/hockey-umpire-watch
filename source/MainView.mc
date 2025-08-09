@@ -1,6 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
+import Toybox.Application;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
 
@@ -72,12 +73,19 @@ class MainView extends WatchUi.View {
             heartRateLabel.setText("HR " + heartRate);
         }
 
+        var stopSymbol = View.findDrawableById("stopPlaySymbol");
+        var startSymbol = View.findDrawableById("startPlaySymbol");
         if (self._app.getTimeKeeper().getCurrentQuarter() <= self._app.getTimeKeeper().maxQuarters) {
             if (self._app.getTimeKeeper().isGameClockRunning()) {
-                dc.fillRectangle(122, 13, 28, 28);
+                stopSymbol.setVisible(true);
+                startSymbol.setVisible(false);
             } else {
-                dc.fillPolygon([[122,13],[150,27],[122,41]]);
+                stopSymbol.setVisible(false);
+                startSymbol.setVisible(true);
             }
+        } else {
+            stopSymbol.setVisible(false);
+            startSymbol.setVisible(false);
         }
 
         var nextExpiringSuspensionTeamLabel = View.findDrawableById("nextExpiringSuspensionTeam");
@@ -131,7 +139,11 @@ class MainView extends WatchUi.View {
         seconds = time % 60;
         time = time / 60;
         minutes = time % 60;
-        return minutes.format("%02d") + ":" + seconds.format("%02d") + ":" + centiseconds.format("%02d");
+        if (Properties.getValue("displayPlayTimeMilliSeconds")) {
+            return minutes.format("%02d") + ":" + seconds.format("%02d") + ":" + centiseconds.format("%02d");
+        } else {
+            return minutes.format("%02d") + ":" + seconds.format("%02d");
+        }
     }
 
     function formatGameMinute(quarter as Number, remainingPlayTime as Number, timePerQuarter as Number) as String {

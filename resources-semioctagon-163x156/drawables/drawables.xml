@@ -1,9 +1,8 @@
 <drawables>
-    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
     <drawable-list id="stopPlaySymbol">
         <shape type="rectangle" x="122" y="13" width="28" height="28" />
     </drawable-list>
     <drawable-list id="startPlaySymbol">
-        <shape type="polygon" points="[[122,13],[150,28],[122,41]]" />
+        <shape type="polygon" points="[[122,13],[150,27],[122,41]]" />
     </drawable-list>
 </drawables>

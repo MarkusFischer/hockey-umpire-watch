@@ -1,14 +1,14 @@
 <layouts>
     <layout id="MainLayout">
-        <label id="time" x="30" y="40" text="17:41" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-        <label id="heartRate" x="30" y="25" text="HR 120" font="Graphics.FONT_XTINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-        <label id="remainingPlayTime" x="center" y="79" text="07:34:00" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
-        <label id="quarter" x="30" y="60" text="Q3" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-        <label id="gameMinute" x="57" y="60" text="38 min" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-        <label id="nextExpiringSuspension" x="center" y="144" text="@Strings.mainLayout_nextExpiringSuspension" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
-        <label id="nextExpiringSuspensionTeam" x="65" y="164" text="H" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
-        <label id="nextExpiringSuspensionPlayer" x="80" y="164" text="52" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" /> 
-        <label id="nextExpiringSuspensionTime" x="105" y="164" text="12:34" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="time" x="33" y="41" text="17:41" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="heartRate" x="33" y="26" text="HR 120" font="Graphics.FONT_XTINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="remainingPlayTime" x="center" y="center" text="07:34:00" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+        <label id="quarter" x="33" y="63" text="Q3" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="gameMinute" x="61" y="63" text="38 min" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="nextExpiringSuspension" x="center" y="150" text="@Strings.mainLayout_nextExpiringSuspension" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+        <label id="nextExpiringSuspensionTeam" x="68" y="172" text="H" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="nextExpiringSuspensionPlayer" x="83" y="172" text="52" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" /> 
+        <label id="nextExpiringSuspensionTime" x="109" y="172" text="12:34" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
         <drawable id="startPlaySymbol" />
         <drawable id="stopPlaySymbol" />
     </layout>

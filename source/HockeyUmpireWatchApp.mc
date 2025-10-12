@@ -46,6 +46,11 @@ class HockeyUmpireWatchApp extends Application.AppBase {
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
         return [ new MainView(self), new MainInputDelegate(self)];
+        // Uncomment the following lines to test the layout for the suspension expired view
+        /*
+        var suspension = new Suspension(:home, :greenCard, 0);
+        return [new SuspensionExpiredAlertView(suspension), new SuspensionExpiredAlertDelegate()];
+        */
     }
 
     function refreshDisplayCallback() as Void {

@@ -1,0 +1,21 @@
+<layouts>
+    <layout id="MainLayout">
+        <label id="time" x="15%" y="19%" text="17:41" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="heartRate" x="15%" y="12%" text="HR 120" font="Graphics.FONT_XTINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="remainingPlayTime" x="center" y="center" text="07:34:00" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+        <label id="quarter" x="15%" y="29%" text="Q3" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="gameMinute" x="28%" y="29%" text="38 min" font="Graphics.FONT_TINY" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="nextExpiringSuspension" x="center" y="69%" text="@Strings.mainLayout_nextExpiringSuspension" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+        <label id="nextExpiringSuspensionTeam" x="31%" y="79%" text="H" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="nextExpiringSuspensionPlayer" x="38%" y="79%" text="52" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" /> 
+        <label id="nextExpiringSuspensionTime" x="50%" y="79%" text="12:34" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <drawable id="startPlaySymbol" />
+        <drawable id="stopPlaySymbol" />
+    </layout>
+    <layout id="SuspensionExpiredAlertView">
+        <label id="heading" x="center" y="60" text="@Strings.suspensionExpiredLayout_suspensionExpired" font="Graphics.FONT_SYSTEM_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+        <label id="suspensionType" x="center" y="80" text="Green" font="Graphics.FONT_SYSTEM_LARGE" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+        <label id="suspensionTeam" x="60" y="110" text="H" font="Graphics.FONT_SYSTEM_LARGE" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+        <label id="suspensionPlayer" x="75" y="110" text="52" font="Graphics.FONT_SYSTEM_LARGE" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" />
+    </layout>
+</layouts>

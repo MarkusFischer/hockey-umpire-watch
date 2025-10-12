@@ -1,8 +1,8 @@
 <drawables>
     <drawable-list id="stopPlaySymbol">
-        <shape type="rectangle" x="129" y="13" width="32" height="32" />
+        <shape type="rectangle" x="126" y="13" width="28" height="28" />
     </drawable-list>
     <drawable-list id="startPlaySymbol">
-        <shape type="polygon" points="[[129,13],[157,29],[129,45]]" />
+        <shape type="polygon" points="[[126,13],[154,27],[126,41]]" />
     </drawable-list>
 </drawables>

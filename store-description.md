@@ -2,6 +2,10 @@
 
 # Hockey Umpire Watch
 
+Although there are already various apps for hockey umpires, something is usually not quite right. Either certain devices are not supported, or the app has not been tested in practice. So here’s another attempt. Without the promise of being the perfect hockey umpire watch. That's not possible and on personal preference. But at least this app has already been tested in practice and has been used umpiring various hockey games. Whether it’s youth or adult games, field hockey or indoor hockey. The wide range of configuration options allows for individual customization. Additionally, the user interface is designed so that even in the rush of a close game, nothing should go wrong.
+
+Moreover, this app is also available as open-source software. Anyone who wants to contribute to its development, whether with their own contributions or with ideas is free to do so. This umpire watch app is not yet fully developed and is still actively maintained.
+
 ## Features
 
 * Supports a wide range of Garmin devices
@@ -42,6 +46,10 @@ This software is free software under the GPL 3.0 license. You can find the sourc
 
 # Hockey Umpire Watch
 
+Auch wenn es schon verschiedene Apps für Hockeyschiedsrichter gibt, irgendetwas passt meist nicht. Entweder werden bestimmte Geräte nicht unterstützt oder die App ist nicht in der Praxis erprobt. Also gibt es hier einen weiteren Versuch. Ohne die Versprechung die perfekte Hockeyschiedsrichteruhr zu sein, dass ist sowieso nicht möglich und vom persönlichen. Aber zumindest wurde diese App bereits in der Praxis erprobt und kam in den verschiedensten Hockeyspielen zum Einsatz. Egal ob Jugend oder Erwachsene, ob Feldhockey oder Hallenhockey. Dabei erlauben die vielfältigen Konfigurationsmöglichkeiten eine individuelle Anpassung. Außerdem ist das Bedienkonzept so ausgelegt, dass auch in der Hektik eines engen Spiels eigentlich nichts schief gehen kann. 
+
+Zusätzlich steht diese App auch als freie Software zur Verfügung. Wer möchte kann gerne bei der Entwicklung unterstützen. Sei es durch eigenen Beiträge oder Ideen. Diese Uhrenapp ist noch nicht fertigt entwickelt und wird noch aktiv gepflegt. 
+
 ## Funktionen
 
 * Unterstützt verschiedene Garmin-Uhren
@@ -51,6 +59,7 @@ This software is free software under the GPL 3.0 license. You can find the sourc
 * Anzeige der aktuellen Herzfrequenz
 * Anzeige des aktuellen Spielabschnitts und Spielminute (aufsteigend)
 * Anzeige der aktuellen Uhrzeit
+* Deutsche und Englische Sprachunterstützung
 
 ## Bedienung
 

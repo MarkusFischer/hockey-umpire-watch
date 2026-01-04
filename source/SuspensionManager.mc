@@ -9,7 +9,7 @@ import Toybox.Timer;
 //! Notificiations are handled by the watch app, the suspension manager gives only the signal.
 class SuspensionManager {
 
-    // Array and last used slot for the min-heap
+    // Array and last used slot for the min-heap that stores the active suspension
     private var _suspensionHeap as Array<Suspension> = new Array<Suspension>[32];
     private var _lastUsedSlot as Number = -1;
 
@@ -20,6 +20,10 @@ class SuspensionManager {
     private var _suspensionTimer as Timer.Timer;
     private var _suspensionStartTime as Number = 0;
     private var _suspensionTimerRunning as Boolean = false;
+
+    //Array for all Suspension independent if active or not
+    private var _allSuspensions as Array<Suspension> = new Array<Suspension>[128];
+    private var _totalGivenSuspensions as Number = 0;
 
     //! Index of the parent node of the node at given index
     //! @param index Index of the node for which we want to know the index of the parent.
@@ -146,7 +150,7 @@ class SuspensionManager {
         }
     }
 
-    //! How much time is expired sinse starting the suspension timer.
+    //! How much time is expired since starting the suspension timer.
     //! @return The time that has expired since starting the suspension timer.
     public function suspensionExpiredTime() as Number {
         if (self._suspensionTimerRunning) {
@@ -177,8 +181,10 @@ class SuspensionManager {
     public function insertSuspension(suspension as Suspension) as Void {
         // Stop the suspension clock to ensure integrity of the heap.
         self.stopSuspensionClock();
-        // Insert the suspension into the min-heap
+        // Insert the suspension into the min-heap and in the list of all Suspensions
         self.heapInsert(suspension);
+        self._allSuspensions[self._totalGivenSuspensions] = suspension;
+        self._totalGivenSuspensions += 1;
         // Restart the suspension clock but only when the game clock is running. 
         if (self._app.getTimeKeeper().isGameClockRunning()) {
             self.startSuspensionClock();

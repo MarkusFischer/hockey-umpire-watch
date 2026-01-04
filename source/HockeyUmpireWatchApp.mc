@@ -48,7 +48,7 @@ class HockeyUmpireWatchApp extends Application.AppBase {
         return [ new MainView(self), new MainInputDelegate(self)];
         // Uncomment the following lines to test the layout for the suspension expired view
         /*
-        var suspension = new Suspension(:home, :greenCard, 0);
+        var suspension = new Suspension(:home, :greenCard, 0, 1, 10000);
         return [new SuspensionExpiredAlertView(suspension), new SuspensionExpiredAlertDelegate()];
         */
     }

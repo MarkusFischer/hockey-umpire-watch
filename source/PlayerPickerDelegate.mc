@@ -27,9 +27,8 @@ class PlayerPickerDelegate extends WatchUi.PickerDelegate {
             team = :awayTeam;
         }
         System.println(team);
-        var suspension = new Suspension(team, self._card, values[1] * 10 + values[2]);
+        var suspension = new Suspension(team, self._card, values[1] * 10 + values[2], self._app.getTimeKeeper().getCurrentQuarter(), self._app.getTimeKeeper().remainingPlayTime());
         self._app.getSuspensionManager().insertSuspension(suspension);
-        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         return true;
     }

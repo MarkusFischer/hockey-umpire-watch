@@ -23,7 +23,7 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    function onSelect() as Boolean {
+    private function handleOnSelect() as Boolean {
         if (self._app.getTimeKeeper().isBreakClockRunning()) {
             self._app.getTimeKeeper().stopBreakClock();
             return true;
@@ -36,6 +36,24 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
                 Attention.vibrate(vibeProfile);
             }
             return true;
+        }
+        return true;
+    }
+
+    function onSelect() as Boolean {
+        var device_settings = System.getDeviceSettings();
+        if (device_settings.isTouchScreen) {
+            return false; // We don't want to start/stop the clock with a press on the screen.
+        }
+
+        return handleOnSelect();
+    }
+
+    function onKey(keyEvent) {
+        // On Touch Screen devices is onSelect a press on the screen. This is unwanted, because it can accidentially stop the clock.
+        var device_settings = System.getDeviceSettings();
+        if (device_settings.isTouchScreen && keyEvent.getKey() == KEY_ENTER) {
+            return handleOnSelect(); 
         }
         return true;
     }

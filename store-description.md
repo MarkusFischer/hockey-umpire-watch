@@ -1,10 +1,6 @@
 # English
 
-# Hockey Umpire Watch
-
-Although there are already various apps for hockey umpires, something is usually not quite right. Either certain devices are not supported, or the app has not been tested in practice. So here’s another attempt. Without the promise of being the perfect hockey umpire watch. That's not possible and on personal preference. But at least this app has already been tested in practice and has been used umpiring various hockey games. Whether it’s youth or adult games, field hockey or indoor hockey. The wide range of configuration options allows for individual customization. Additionally, the user interface is designed so that even in the rush of a close game, nothing should go wrong.
-
-Moreover, this app is also available as open-source software. Anyone who wants to contribute to its development, whether with their own contributions or with ideas is free to do so. This umpire watch app is not yet fully developed and is still actively maintained.
+Another app for field hockey umpires, test and developed by an active hockey umpire.
 
 ## Features
 
@@ -40,15 +36,10 @@ To customize the number of periods, the playtime for each period, and the countd
 
 ## Contact
 
-This software is free software under the GPL 3.0 license. You can find the source code on GitHub. If you encounter a bug or want to suggest a feature, feel free to use the issue tracker on [GitHub](https://github.com/MarkusFischer/hockey-umpire-watch/). Or write me an email to [hockeywatch@markus-fischer.eu](mailto:hockeywatch@markus-fischer.eu).
-
+This software is free software under the GPL 3.0 license. You can find the source code on GitHub (https://github.com/MarkusFischer/hockey-umpire-watch/). If you encounter a bug or want to suggest a feature, feel free to contact me via e-mail (hockeyumpirewatch@markus-fischer.eu) or use the issue tracker on GitHub. 
 # Deutsch
 
-# Hockey Umpire Watch
-
-Auch wenn es schon verschiedene Apps für Hockeyschiedsrichter gibt, irgendetwas passt meist nicht. Entweder werden bestimmte Geräte nicht unterstützt oder die App ist nicht in der Praxis erprobt. Also gibt es hier einen weiteren Versuch. Ohne die Versprechung die perfekte Hockeyschiedsrichteruhr zu sein, dass ist sowieso nicht möglich und vom persönlichen. Aber zumindest wurde diese App bereits in der Praxis erprobt und kam in den verschiedensten Hockeyspielen zum Einsatz. Egal ob Jugend oder Erwachsene, ob Feldhockey oder Hallenhockey. Dabei erlauben die vielfältigen Konfigurationsmöglichkeiten eine individuelle Anpassung. Außerdem ist das Bedienkonzept so ausgelegt, dass auch in der Hektik eines engen Spiels eigentlich nichts schief gehen kann. 
-
-Zusätzlich steht diese App auch als freie Software zur Verfügung. Wer möchte kann gerne bei der Entwicklung unterstützen. Sei es durch eigenen Beiträge oder Ideen. Diese Uhrenapp ist noch nicht fertigt entwickelt und wird noch aktiv gepflegt. 
+Eine weitere App für Hockeyschiedsrichter, welche mit der eigenen Erfahrung als Hockeyschiedsrichter entwickelt wurde.
 
 ## Funktionen
 
@@ -59,11 +50,10 @@ Zusätzlich steht diese App auch als freie Software zur Verfügung. Wer möchte 
 * Anzeige der aktuellen Herzfrequenz
 * Anzeige des aktuellen Spielabschnitts und Spielminute (aufsteigend)
 * Anzeige der aktuellen Uhrzeit
-* Deutsche und Englische Sprachunterstützung
 
 ## Bedienung
 
-Nachdem die App gestartet wurde, beginnt die Uhr im ersten Viertel mit 15 Minuten verbleibender Spielzeit. Die Uhr kann mit der Start/Stopp-Taste gestartet und wieder gestoppt werden. Dann läuft die Spielzeit runter, und die Spielminute steigt an. Die Zurück-Taste startet den Vorbereitungszeit für die Strafecke. Standardmäßig ist diese Zeit auf 40 Sekunden eingestellt, mit einer ersten Benachrichtigung nach 30 Sekunden. Die Zurück-Taste stoppt diesen Timer wieder. Wenn die Spielzeit während/vor der Aktivierung des Strafecken-Timers gestoppt wurde, wird der Vorbereitungstimer automatisch gestoppt, wenn die Spielzeit fortsetzt wird. Nachdem ein Viertel abgelaufen ist, erfolg eine Benachrichtigung, und eine ansteigende Uhr startet, um die Pausenzeit zu überwachen. Durch Drücken der Start/Stopp-Taste wird dieser Timer gestoppt, und die Uhr wechselt automatisch zum nächsten Viertel.
+Nachdem die App gestartet wurde, beginnt die Uhr im ersten Viertel mit 15 Minuten verbleibender Spielzeit. Die Uhr kann mit der Start/Stopp-Taste gestartet und wieder gestoppt werden. Dann läuft die Spielzeit runter, und die Spielminute steigt an. Die Zurück-Taste startet den Vorbereitungszeit für die Strafecke. Standardmäßig ist diese Zeit auf 40 Sekunden eingestellt, mit einer ersten Benachrichtigung nach 30 Sekunden. Die Zurück-Taste stoppt diesen Timer wieder. Wenn die Spielzeit während/vor der Aktivierung des Strafecken-Timers gestoppt wurde, wird der Vorbereitungstimer automatisch gestoppt, wenn die Spielzeit fortsetzt wird. Nachdem ein Viertel abgelaufen ist, erfolgt eine Benachrichtigung, und eine ansteigende Uhr startet, um die Pausenzeit zu überwachen. Durch Drücken der Start/Stopp-Taste wird dieser Timer gestoppt, und die Uhr wechselt automatisch zum nächsten Viertel.
 
 Alle Zeiten können konfiguriert werden; siehe dazu den Abschnitt **Anpassung**.
 
@@ -72,8 +62,6 @@ Alle Zeiten können konfiguriert werden; siehe dazu den Abschnitt **Anpassung**.
 Um die Zeit für eine persönliche Strafe eines Spielers zu stoppen,  In dem folgenden Menü kann zunächst der Typ der Suspendierung (grüne Karte, gelbe Karte) ausgewählt werden. Für gelbe Karten gibt es drei Zeitvorgaben (standardmäßig 5, 10 und 15 Minuten), die im Menü konfiguriert werden können. Nachdem der Typ der Suspendierung ausgewählt wurde, kann die Trikotnummer des Spielers eingeben werden. Zusätzlich gibt es ein Feld für die Heimmannschaft (H) oder die Gastmannschaft (G).
 
 Die Straftzeit beginnt automatisch, wenn die Spielzeit fortgesetzt wird. Wenn die Zeit abgelaufen ist, erfolgt automatisch eine Benachrichtigung. Die nächste ablaufende Strafzeit wird am unteren Bildschirmrand angezeigt. Wenn die Spielzeit gestoppt wird, werden alle Strafzeiten ebenfalls gestoppt.
-
-Durch die Menüs kann mit der Aufwärts- und Abwärtstaste navigieren werden. Eine Aktion wird mit der Start/Stopp-Taste bestätigt, mit der Zurück-Taste kann zum vorherigen Menügpunkt zurückgekehrt werden.
 
 ### Anpassung
 
@@ -85,6 +73,6 @@ Die Anzahl der Spielabschnitte, die Spielzeit für jeden Abschnitt und die Vorbe
 
 ## Kontakt
 
-Diese Software ist freie Software unter der GPL 3.0 Lizenz. Den Quellcode findest du auf [GitHub](https://github.com/MarkusFischer/hockey-umpire-watch/). Wenn du einen Bug entdeckst oder eine Funktion vorschlagen möchtest, kannst du gerne den Bugtracker auf GitHub verwenden oder mir eine E-Mail an [hockeywatch@markus-fischer.eu](mailto:hockeywatch@markus-fischer.eu) schreiben.
+Diese Software ist freie Software unter der GPL 3.0 Lizenz. Den Quellcode findest du auf [GitHub](https://github.com/MarkusFischer/hockey-umpire-watch/). Wenn du einen Bug entdeckst oder eine Funktion vorschlagen möchtest, kannst du mich gerne per E-Mail (hockeyumpirewatch@markus-fischer.eu) kontaktieren oder den Bugtracker auf GitHub verwenden.
 
 

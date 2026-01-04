@@ -34,4 +34,4 @@ To customize the number of periods, the playtime for each period, and the countd
 
 ## Contact
 
-This software is free software under the GPL 3.0 license. You can find the source code on GitHub. If you encounter a bug or want to suggest a feature, feel free to use the issue tracker on [GitHub](https://github.com/MarkusFischer/hockey-umpire-watch/). Or write me an email to [hockeywatch@markus-fischer.eu](mailto:hockeywatch@markus-fischer.eu).
+This software is free software under the GPL 3.0 license. You can find the source code on GitHub. If you encounter a bug or want to suggest a feature, feel free to use the issue tracker on [GitHub](https://github.com/MarkusFischer/hockey-umpire-watch/). Or write me an email to [hockey-umpire-watch@markus-fischer.eu](mailto:hockey-umpire-watch@markus-fischer.eu).

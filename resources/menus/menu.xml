@@ -10,4 +10,8 @@
         <menu-item id="yellowCardLong" label="@Strings.suspensionMenu_yellowCardLong" />
         <menu-item id="yellowRedCard" label="@Strings.suspensionMenu_yellowRedCard" />
     </menu2>
+    <menu2 id="GameEventMenu" title="@Strings.gameEventMenu_title">
+        <menu-item id="listSuspensions" label="@Strings.gameEventMenu_listSuspensions" />
+        <menu-item id="suspendPlayer" label="@Strings.gameEventMenu_suspendPlayer" />
+    </menu2>
 </menus>

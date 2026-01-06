@@ -4,6 +4,10 @@
     <string id="menu_quitApp">Quit App</string>
     <string id="menu_listSuspensions">List Suspensions</string>
 
+    <string id="gameEventMenu_title">Game events</string>
+    <string id="gameEventMenu_listSuspensions">List suspensions</string>
+    <string id="gameEventMenu_suspendPlayer">Suspend player</string>
+
     <string id="suspensionMenu_selectSuspension">Select suspension</string>
     <string id="suspensionMenu_greenCard">green card</string>
     <string id="suspensionMenu_yellowCardShort">short yellow card</string>

@@ -2,11 +2,9 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 class PlayerPickerDelegate extends WatchUi.PickerDelegate {
-    private var _card as Symbol?;
     private var _app as HockeyUmpireWatchApp?;
 
-    public function initialize(card as Symbol?, app as HockeyUmpireWatchApp?) {
-        _card = card;
+    public function initialize(app as HockeyUmpireWatchApp?) {
         _app = app;
         PickerDelegate.initialize();
     }
@@ -26,12 +24,9 @@ class PlayerPickerDelegate extends WatchUi.PickerDelegate {
         } else {
             team = :awayTeam;
         }
-        System.println(team);
-        var suspension = new Suspension(team, self._card, values[1] * 10 + values[2], self._app.getTimeKeeper().getCurrentQuarter(), self._app.getTimeKeeper().remainingPlayTime());
-        self._app.getSuspensionManager().insertSuspension(suspension);
-        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
-        //Two sub menus -> have to pop two views
-        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+
+        WatchUi.pushView(new Rez.Menus.SuspensionSelectionMenu(), new SuspensionSelectionMenuDelegate(team, values[1] * 10 + values[2], self._app), WatchUi.SLIDE_IMMEDIATE);
+        
         return true;
     }
 }

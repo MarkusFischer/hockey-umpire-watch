@@ -179,12 +179,20 @@ class SuspensionManager {
     //! Insert a new suspension and start the timer if necessary.
     //! @param The suspension that has to be inserted.
     public function insertSuspension(suspension as Suspension) as Void {
-        // Stop the suspension clock to ensure integrity of the heap.
-        self.stopSuspensionClock();
-        // Insert the suspension into the min-heap and in the list of all Suspensions
-        self.heapInsert(suspension);
+        // Insert the suspension in the list of all suspensions
         self._allSuspensions[self._totalGivenSuspensions] = suspension;
         self._totalGivenSuspensions += 1;
+        
+        if (suspension.getCard() == :redCard or suspension.getCard() == :yellowRedCard) {
+            // red cards and yellow-red cards do not expire -> dont insert them into the heap
+            // TODO: yellow-red cards can expire in the german indoor hockey rules
+            return;
+        }
+
+        // Stop the suspension clock to ensure integrity of the heap.
+        self.stopSuspensionClock();
+        // Insert the suspension into the min-heap
+        self.heapInsert(suspension);
         // Restart the suspension clock but only when the game clock is running. 
         if (self._app.getTimeKeeper().isGameClockRunning()) {
             self.startSuspensionClock();

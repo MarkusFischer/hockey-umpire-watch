@@ -10,7 +10,9 @@ class SuspensionListMenu extends WatchUi.Menu2
                                                                 :yellowCardShort => Application.loadResource(Rez.Strings.suspensionListMenu_yellowCardShort),
                                                                 :yellowCardMedium => Application.loadResource(Rez.Strings.suspensionListMenu_yellowCardMedium),
                                                                 :yellowCardLong => Application.loadResource(Rez.Strings.suspensionListMenu_yellowCardLong),
-                                                                :yellowRedCard => Application.loadResource(Rez.Strings.suspensionListMenu_yellowRedCard)}; 
+                                                                :yellowRedCard => Application.loadResource(Rez.Strings.suspensionListMenu_yellowRedCard),
+                                                                :redCard => Application.loadResource(Rez.Strings.suspensionListMenu_redCard)}; 
+
 
     private const _teamLabels as Dictionary<Symbol, String?> = {:homeTeam => Application.loadResource(Rez.Strings.suspensionListMenu_homeTeam),
                                                                 :awayTeam => Application.loadResource(Rez.Strings.suspensionListMenu_awayTeam)};                        

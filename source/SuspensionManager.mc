@@ -202,4 +202,15 @@ class SuspensionManager {
     public function nextExpiringSuspension() as Suspension? {
         return self._suspensionHeap[0];
     }
+
+    public function getTotalNumberOfGivenSuspensions() as Number {
+        return self._totalGivenSuspensions;
+    }
+
+    public function getSuspensionByIndex(index as Number) as Suspension? {
+        if (index >= 0 and index < self._totalGivenSuspensions) {
+            return self._allSuspensions[index];
+        }
+        return null;
+    }
 }

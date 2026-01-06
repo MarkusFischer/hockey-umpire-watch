@@ -1,5 +1,6 @@
 <menus>
     <menu id="MainMenu">
+        <menu-item id="listSuspensions" label="@Strings.menu_listSuspensions" />
         <menu-item id="quitApp" label="@Strings.menu_quitApp" />
     </menu>
     <menu2 id="SuspensionSelectionMenu" title="@Strings.suspensionMenu_selectSuspension">

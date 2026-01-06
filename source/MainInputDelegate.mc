@@ -13,7 +13,7 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() as Boolean {
-        WatchUi.pushView(new Rez.Menus.MainMenu(), new MenuDelegate(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new Rez.Menus.MainMenu(), new MenuDelegate(self._app), WatchUi.SLIDE_UP);
         return true;
     }
 

@@ -14,5 +14,6 @@
     <menu2 id="GameEventMenu" title="@Strings.gameEventMenu_title">
         <menu-item id="listSuspensions" label="@Strings.gameEventMenu_listSuspensions" />
         <menu-item id="suspendPlayer" label="@Strings.gameEventMenu_suspendPlayer" />
+        <menu-item id="quitApp" label="@Strings.gameEventMenu_quitApp" />
     </menu2>
 </menus>

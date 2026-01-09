@@ -7,6 +7,8 @@
     <string id="gameEventMenu_title">Game events</string>
     <string id="gameEventMenu_listSuspensions">List suspensions</string>
     <string id="gameEventMenu_suspendPlayer">Suspend player</string>
+    <string id="gameEventMenu_quitApp">Quit App</string>
+    <string id="gameEventMenu_quitAppConfirmation">Do you really want to quit?</string>
 
     <string id="suspensionMenu_selectSuspension">Select suspension</string>
     <string id="suspensionMenu_greenCard">green card</string>

@@ -8,14 +8,14 @@
     <string id="gameEventMenu_listSuspensions">List suspensions</string>
     <string id="gameEventMenu_suspendPlayer">Suspend player</string>
 
-    <string id="suspensionMenu_selectSuspension">Select suspension</string>
-    <string id="suspensionMenu_greenCard">green card</string>
-    <string id="suspensionMenu_yellowCardShort">short yellow card</string>
-    <string id="suspensionMenu_yellowCardMedium">medium yellow card</string>
-    <string id="suspensionMenu_yellowCardLong">long yellow card</string>
-    <string id="suspensionMenu_yellowRedCard">yellow red card</string>
-    <string id="suspensionMenu_redCard">red card</string>
-    <string id="suspensionMenu_listSuspensions">List of all Suspensions</string>
+    <string id="suspensionSelectionMenu_selectSuspension">Select suspension</string>
+    <string id="suspensionSelectionMenu_greenCard">green card</string>
+    <string id="suspensionSelectionMenu_yellowCardShort">short yellow card</string>
+    <string id="suspensionSelectionMenu_yellowCardMedium">medium yellow card</string>
+    <string id="suspensionSelectionMenu_yellowCardLong">long yellow card</string>
+    <string id="suspensionSelectionMenu_yellowRedCard">yellow red card</string>
+    <string id="suspensionSelectionMenu_redCard">red card</string>
+    <string id="suspensionSelectionMenu_listSuspensions">List of all Suspensions</string>
     
     <string id="suspensionListMenu_noSuspension">No Suspension</string>
     <string id="suspensionListMenu_greenCard">green card</string>

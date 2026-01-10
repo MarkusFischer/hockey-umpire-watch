@@ -12,8 +12,7 @@ class GameEventMenuDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     function onSelect(item as WatchUi.MenuItem) as Void {
-        switch (item.getId())
-        {
+        switch (item.getId()) {
             case :listSuspensions:
                 WatchUi.pushView(new SuspensionListMenu(self._app), new SuspensionListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
                 break;

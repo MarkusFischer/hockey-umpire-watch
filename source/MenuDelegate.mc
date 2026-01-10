@@ -22,7 +22,7 @@ class MenuDelegate extends WatchUi.MenuInputDelegate {
 
     function onMenuItem(item as Symbol) as Void {
         System.println(_teamLabels);
-        var suspensionListMenu = new WatchUi.Menu2({:title=>Application.loadResource(Rez.Strings.suspensionMenu_listSuspensions)});
+        var suspensionListMenu = new WatchUi.Menu2({:title=>Application.loadResource(Rez.Strings.suspensionSelectionMenu_listSuspensions)});
         var suspensionListMenuDelegate = new SuspensionListMenuDelegate(self._app);
         if (self._app.getSuspensionManager().getTotalNumberOfGivenSuspensions() == 0) {
             suspensionListMenu.addItem(

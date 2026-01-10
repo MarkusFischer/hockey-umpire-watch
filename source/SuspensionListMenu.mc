@@ -6,7 +6,7 @@ class SuspensionListMenu extends WatchUi.Menu2
 {
     private var _app as HockeyUmpireWatchApp?;
 
-    private const _cardLabels as Dictionary<Symbol, String?> = {:greenCard => Application.loadResource(Rez.Strings.suspensionListMenu_greenCard),
+    private static const _cardLabels as Dictionary<Symbol, String?> = {:greenCard => Application.loadResource(Rez.Strings.suspensionListMenu_greenCard),
                                                                 :yellowCardShort => Application.loadResource(Rez.Strings.suspensionListMenu_yellowCardShort),
                                                                 :yellowCardMedium => Application.loadResource(Rez.Strings.suspensionListMenu_yellowCardMedium),
                                                                 :yellowCardLong => Application.loadResource(Rez.Strings.suspensionListMenu_yellowCardLong),
@@ -14,7 +14,7 @@ class SuspensionListMenu extends WatchUi.Menu2
                                                                 :redCard => Application.loadResource(Rez.Strings.suspensionListMenu_redCard)}; 
 
 
-    private const _teamLabels as Dictionary<Symbol, String?> = {:homeTeam => Application.loadResource(Rez.Strings.suspensionListMenu_homeTeam),
+    private static const _teamLabels as Dictionary<Symbol, String?> = {:homeTeam => Application.loadResource(Rez.Strings.suspensionListMenu_homeTeam),
                                                                 :awayTeam => Application.loadResource(Rez.Strings.suspensionListMenu_awayTeam)};                        
 
 

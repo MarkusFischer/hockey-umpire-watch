@@ -12,6 +12,11 @@ class SuspensionListMenuDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     function onSelect(item as WatchUi.MenuItem) as Void {
+        if (item.getId() == -1) {
+            System.println("Empty Suspension list");
+        } else {
+            System.println(item.getId());
+        }
     }
 
 }

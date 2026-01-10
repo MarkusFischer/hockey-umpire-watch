@@ -3,13 +3,13 @@
         <menu-item id="listSuspensions" label="@Strings.menu_listSuspensions" />
         <menu-item id="quitApp" label="@Strings.menu_quitApp" />
     </menu>
-    <menu2 id="SuspensionSelectionMenu" title="@Strings.suspensionMenu_selectSuspension">
-        <menu-item id="greenCard" label="@Strings.suspensionMenu_greenCard" />
-        <menu-item id="yellowCardShort" label="@Strings.suspensionMenu_yellowCardShort" />
-        <menu-item id="yellowCardMedium" label="@Strings.suspensionMenu_yellowCardMedium" />
-        <menu-item id="yellowCardLong" label="@Strings.suspensionMenu_yellowCardLong" />
-        <menu-item id="yellowRedCard" label="@Strings.suspensionMenu_yellowRedCard" />
-        <menu-item id="redCard" label="@Strings.suspensionMenu_redCard" />
+    <menu2 id="SuspensionSelectionMenu" title="@Strings.suspensionSelectionMenu_selectSuspension">
+        <menu-item id="greenCard" label="@Strings.suspensionSelectionMenu_greenCard" />
+        <menu-item id="yellowCardShort" label="@Strings.suspensionSelectionMenu_yellowCardShort" />
+        <menu-item id="yellowCardMedium" label="@Strings.suspensionSelectionMenu_yellowCardMedium" />
+        <menu-item id="yellowCardLong" label="@Strings.suspensionSelectionMenu_yellowCardLong" />
+        <menu-item id="yellowRedCard" label="@Strings.suspensionSelectionMenu_yellowRedCard" />
+        <menu-item id="redCard" label="@Strings.suspensionSelectionMenu_redCard" />
     </menu2>
     <menu2 id="GameEventMenu" title="@Strings.gameEventMenu_title">
         <menu-item id="listSuspensions" label="@Strings.gameEventMenu_listSuspensions" />

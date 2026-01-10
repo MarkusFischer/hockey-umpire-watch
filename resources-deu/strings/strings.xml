@@ -3,12 +3,12 @@
 
     <string id="menu_quitApp">App beenden.</string>
 
-    <string id="suspensionMenu_selectSuspension">Strafe auswählen.</string>
-    <string id="suspensionMenu_greenCard">grüne Karte</string>
-    <string id="suspensionMenu_yellowCardShort">kurze gelbe Karte</string>
-    <string id="suspensionMenu_yellowCardMedium">mittlere gelbe Karte</string>
-    <string id="suspensionMenu_yellowCardLong">lange gelbe Karte</string>
-    <string id="suspensionMenu_yellowRedCard">gelb-rote Karte</string>
+    <string id="suspensionSelectionMenu_selectSuspension">Strafe auswählen.</string>
+    <string id="suspensionSelectionMenu_greenCard">grüne Karte</string>
+    <string id="suspensionSelectionMenu_yellowCardShort">kurze gelbe Karte</string>
+    <string id="suspensionSelectionMenu_yellowCardMedium">mittlere gelbe Karte</string>
+    <string id="suspensionSelectionMenu_yellowCardLong">lange gelbe Karte</string>
+    <string id="suspensionSelectionMenu_yellowRedCard">gelb-rote Karte</string>
     
     <string id="mainLayout_nextExpiringSuspension">Ablaufende Karte:</string>
     <string id="mainLayout_playtimeExpired">Spielzeit vorbei!</string>

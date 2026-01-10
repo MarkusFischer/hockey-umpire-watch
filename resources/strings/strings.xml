@@ -2,7 +2,6 @@
     <string id="AppName">Hockey Umpire Watch</string>
 
     <string id="menu_quitApp">Quit App</string>
-    <string id="menu_listSuspensions">List Suspensions</string>
 
     <string id="gameEventMenu_title">Game events</string>
     <string id="gameEventMenu_listSuspensions">List suspensions</string>
@@ -17,8 +16,8 @@
     <string id="suspensionSelectionMenu_yellowCardLong">long yellow card</string>
     <string id="suspensionSelectionMenu_yellowRedCard">yellow red card</string>
     <string id="suspensionSelectionMenu_redCard">red card</string>
-    <string id="suspensionSelectionMenu_listSuspensions">List of all Suspensions</string>
     
+    <string id="suspensionListMenu_listSuspensions">List of all Suspensions</string>
     <string id="suspensionListMenu_noSuspension">No Suspension</string>
     <string id="suspensionListMenu_greenCard">green card</string>
     <string id="suspensionListMenu_yellowCardShort">yellow card</string>
@@ -28,6 +27,7 @@
     <string id="suspensionListMenu_redCard">red card</string>
     <string id="suspensionListMenu_homeTeam">H</string>
     <string id="suspensionListMenu_awayTeam">G</string>
+    <string id="suspensionListMenu_subtitle">$3$ min: $1$ Nr. $2$</string>
 
     <string id="mainLayout_nextExpiringSuspension">Expiring Suspen.:</string>
     <string id="mainLayout_playtimeExpired">Playtime over!</string>

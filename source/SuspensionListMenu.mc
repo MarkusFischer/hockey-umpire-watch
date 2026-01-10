@@ -20,7 +20,7 @@ class SuspensionListMenu extends WatchUi.Menu2
 
     public function initialize(app as HockeyUmpireWatchApp?)
     {
-        Menu2.initialize({:title=>Application.loadResource(Rez.Strings.suspensionMenu_listSuspensions)});
+        Menu2.initialize({:title=>Application.loadResource(Rez.Strings.suspensionListMenu_listSuspensions)});
         self._app = app;
 
         if (self._app.getSuspensionManager().getTotalNumberOfGivenSuspensions() == 0) {
@@ -30,7 +30,7 @@ class SuspensionListMenu extends WatchUi.Menu2
         } else {
             for (var index = 0; index < self._app.getSuspensionManager().getTotalNumberOfGivenSuspensions(); index += 1) {
                 var suspension = self._app.getSuspensionManager().getSuspensionByIndex(index);
-                var suspension_sub_label = "" + self._teamLabels[suspension.getTeam()] + " " + suspension.getPlayerNumber() + " " + suspension.getGameMinuteAtSuspension() + " min";
+                var suspension_sub_label = Lang.format(Application.loadResource(Rez.Strings.suspensionListMenu_subtitle), [self._teamLabels[suspension.getTeam()], suspension.getPlayerNumber(), suspension.getGameMinuteAtSuspension()]);
                 self.addItem(
                     new MenuItem(self._cardLabels[suspension.getCard()], suspension_sub_label, index, {})
                 );

@@ -2,9 +2,9 @@
     <string id="AppName">Hockey Schiedsrichter Uhr</string>
 
     <string id="menu_quitApp">App beenden.</string>
-
     
     <string id="gameEventMenu_title">Spielereignis</string>
+    <string id="gameEventMenu_listSuspensions">Kartenliste</string>
     <string id="gameEventMenu_suspendPlayer">Karte vergeben.</string>
     <string id="gameEventMenu_quitApp">App beenden.</string>
     <string id="gameEventMenu_quitAppConfirmation">Möchtest du die App wirklich beenden?</string>
@@ -15,6 +15,19 @@
     <string id="suspensionSelectionMenu_yellowCardMedium">mittlere gelbe Karte</string>
     <string id="suspensionSelectionMenu_yellowCardLong">lange gelbe Karte</string>
     <string id="suspensionSelectionMenu_yellowRedCard">gelb-rote Karte</string>
+    <string id="suspensionSelectionMenu_redCard">rote Karte</string>
+
+    <string id="suspensionListMenu_listSuspensions">Alle persönlichen Strafen.</string>
+    <string id="suspensionListMenu_noSuspension">Keine Strafe.</string>
+    <string id="suspensionListMenu_greenCard">Grüne Karte</string>
+    <string id="suspensionListMenu_yellowCardShort">Gelbe Karte</string>
+    <string id="suspensionListMenu_yellowCardMedium">Gelbe Karte</string>
+    <string id="suspensionListMenu_yellowCardLong">Gelbe Karte</string>
+    <string id="suspensionListMenu_yellowRedCard">Gelb-Rote Karte</string>
+    <string id="suspensionListMenu_redCard">Rote Karte</string>
+    <string id="suspensionListMenu_homeTeam">H</string>
+    <string id="suspensionListMenu_awayTeam">G</string>
+    <string id="suspensionListMenu_subtitle">$3$ min: $1$ Nr. $2$</string>
     
     <string id="mainLayout_nextExpiringSuspension">Ablaufende Karte:</string>
     <string id="mainLayout_playtimeExpired">Spielzeit vorbei!</string>

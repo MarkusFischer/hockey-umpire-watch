@@ -3,6 +3,12 @@
 
     <string id="menu_quitApp">App beenden.</string>
 
+    
+    <string id="gameEventMenu_title">Spielereignis</string>
+    <string id="gameEventMenu_suspendPlayer">Karte vergeben.</string>
+    <string id="gameEventMenu_quitApp">App beenden.</string>
+    <string id="gameEventMenu_quitAppConfirmation">Möchtest du die App wirklich beenden?</string>
+
     <string id="suspensionSelectionMenu_selectSuspension">Strafe auswählen.</string>
     <string id="suspensionSelectionMenu_greenCard">grüne Karte</string>
     <string id="suspensionSelectionMenu_yellowCardShort">kurze gelbe Karte</string>

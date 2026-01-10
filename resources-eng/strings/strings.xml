@@ -3,12 +3,18 @@
 
     <string id="menu_quitApp">Quit App</string>
 
+    <string id="gameEventMenu_title">Game events</string>
+    <string id="gameEventMenu_suspendPlayer">Suspend player</string>
+    <string id="gameEventMenu_quitApp">Quit App</string>
+    <string id="gameEventMenu_quitAppConfirmation">Do you really want to quit?</string>
+
     <string id="suspensionSelectionMenu_selectSuspension">Select suspension</string>
     <string id="suspensionSelectionMenu_greenCard">green card</string>
     <string id="suspensionSelectionMenu_yellowCardShort">short yellow card</string>
     <string id="suspensionSelectionMenu_yellowCardMedium">medium yellow card</string>
     <string id="suspensionSelectionMenu_yellowCardLong">long yellow card</string>
     <string id="suspensionSelectionMenu_yellowRedCard">yellow red card</string>
+
     
     <string id="mainLayout_nextExpiringSuspension">Expiring Suspen.:</string>
     <string id="mainLayout_playtimeExpired">Playtime over!</string>

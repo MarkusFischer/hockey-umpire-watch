@@ -13,6 +13,12 @@ class GameEventMenuDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item as WatchUi.MenuItem) as Void {
         switch (item.getId()) {
+            case :goals:
+                var goalMenu = new Rez.Menus.GoalMenu();
+                var listGoalsString = Lang.format(Application.loadResource(Rez.Strings.goalMenu_listGoals), [self._app.getGoalManager().getGoals(:homeTeam), self._app.getGoalManager().getGoals(:awayTeam)]);
+                goalMenu.getItem(0).setLabel(listGoalsString);
+                WatchUi.pushView(goalMenu, new GoalMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
+                break;
             case :listSuspensions:
                 WatchUi.pushView(new SuspensionListMenu(self._app), new SuspensionListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
                 break;

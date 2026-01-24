@@ -4,6 +4,7 @@
     <string id="menu_quitApp">Quit App</string>
 
     <string id="gameEventMenu_title">Game events</string>
+    <string id="gameEventMenu_goals">Goals</string>
     <string id="gameEventMenu_listSuspensions">List suspensions</string>
     <string id="gameEventMenu_suspendPlayer">Suspend player</string>
     <string id="gameEventMenu_quitApp">Quit App</string>
@@ -28,6 +29,10 @@
     <string id="suspensionListMenu_homeTeam">H</string>
     <string id="suspensionListMenu_awayTeam">G</string>
     <string id="suspensionListMenu_subtitle">$3$ min: $1$ Nr. $2$</string>
+
+    <string id="goalMenu_title">Goals</string>
+    <string id="goalMenu_listGoals">$1$:$2$</string>
+    <string id="goalMenu_giveGoal">Give Goal</string>
     
     <string id="mainLayout_nextExpiringSuspension">Expiring Suspen.:</string>
     <string id="mainLayout_playtimeExpired">Playtime over!</string>
@@ -40,6 +45,7 @@
     <string id="suspensionExpiredLayout_yellowRedCard">yellow-red</string>
 
     <string id="playerPickerLayout_title">Choose player</string>
+    <string id="teamPickerLayout_title">Choose team that scored.</string>
 
     <string id="settings_quarterSettings">Periode settings</string>
     <string id="settings_quarterSettings_maxQuarters">No. of periods</string>

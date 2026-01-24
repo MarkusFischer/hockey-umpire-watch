@@ -4,6 +4,7 @@
     <string id="menu_quitApp">App beenden.</string>
     
     <string id="gameEventMenu_title">Spielereignis</string>
+    <string id="gameEventMenu_goals">Tore</string>
     <string id="gameEventMenu_listSuspensions">Kartenliste</string>
     <string id="gameEventMenu_suspendPlayer">Karte vergeben.</string>
     <string id="gameEventMenu_quitApp">App beenden.</string>
@@ -28,7 +29,11 @@
     <string id="suspensionListMenu_homeTeam">H</string>
     <string id="suspensionListMenu_awayTeam">G</string>
     <string id="suspensionListMenu_subtitle">$3$ min: $1$ Nr. $2$</string>
-    
+
+    <string id="goalMenu_title">Tore</string>
+    <string id="goalMenu_listGoals">$1$:$2$</string>
+    <string id="goalMenu_giveGoal">Tor vergeben</string>
+
     <string id="mainLayout_nextExpiringSuspension">Ablaufende Karte:</string>
     <string id="mainLayout_playtimeExpired">Spielzeit vorbei!</string>
     
@@ -40,6 +45,7 @@
     <string id="suspensionExpiredLayout_yellowRedCard">Gelb-Rot</string>
 
     <string id="playerPickerLayout_title">Spieler wählen</string>
+    <string id="teamPickerLayout_title">Team auswählen, welches ein Tor geschossen hat.</string>
 
     <string id="settings_quarterSettings">Spielzeiteinstellungen</string>
     <string id="settings_quarterSettings_maxQuarters">Anzahl an Abschnitten</string>

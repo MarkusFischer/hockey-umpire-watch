@@ -1,0 +1,15 @@
+import Toybox.Graphics;
+import Toybox.Lang;
+import Toybox.WatchUi;
+
+class TeamPicker extends WatchUi.Picker {
+    public function initialize() {
+        var title = new WatchUi.Text({:text=>Rez.Strings.teamPickerLayout_title, :locX=>WatchUi.LAYOUT_HALIGN_CENTER,
+            :locY=>WatchUi.LAYOUT_VALIGN_BOTTOM, :color=>Graphics.COLOR_WHITE});
+        Picker.initialize({:title=>title, :pattern=>[new TextFactory(["H", "G"])]});
+    }
+
+    public function onUpdate(dc as Dc) as Void {
+        Picker.onUpdate(dc);
+    }
+}

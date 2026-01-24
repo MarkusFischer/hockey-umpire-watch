@@ -33,7 +33,7 @@ class HockeyUmpireWatchApp extends Application.AppBase {
         self._timeKeeper = new TimeKeeper(self);
         self._refreshDisplayTimer = new Timer.Timer();
         self._suspensionManager = new SuspensionManager(self);
-        self._goalManager = new GoalManager();
+        self._goalManager = new GoalManager(self);
 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         Sensor.enableSensorEvents(method(:sensorCallback));

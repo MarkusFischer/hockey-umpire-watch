@@ -32,6 +32,7 @@
 
     <string id="goalMenu_title">Goals</string>
     <string id="goalMenu_listGoals">$1$:$2$</string>
+    <string id="goalMenu_listGoals_subtitle">HT: $1$:$2$</string>
     <string id="goalMenu_giveGoal">Give Goal</string>
     
     <string id="mainLayout_nextExpiringSuspension">Expiring Suspen.:</string>

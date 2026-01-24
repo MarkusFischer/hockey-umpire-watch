@@ -18,7 +18,6 @@ class TeamPickerDelegate extends WatchUi.PickerDelegate {
     //! @param values The values chosen in the picker
     //! @return true if handled, false otherwise
     public function onAccept(values as Array) as Boolean {
-        var team;
         if (values[0].equals("H")) {
             self._app.getGoalManager().giveGoal(:homeTeam);
         } else {

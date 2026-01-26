@@ -30,7 +30,7 @@ class SuspensionListMenu extends WatchUi.Menu2
         } else {
             for (var index = 0; index < self._app.getSuspensionManager().getTotalNumberOfGivenSuspensions(); index += 1) {
                 var suspension = self._app.getSuspensionManager().getSuspensionByIndex(index);
-                var suspension_sub_label = Lang.format(Application.loadResource(Rez.Strings.suspensionListMenu_subtitle), [self._teamLabels[suspension.getTeam()], suspension.getPlayerNumber(), suspension.getGameMinuteAtSuspension()]);
+                var suspension_sub_label = Lang.format(Application.loadResource(Rez.Strings.suspensionListMenu_subtitle), [self._teamLabels[suspension.getTeam()], suspension.getPlayerNumber(), suspension.getGameMinuteAtEvent()]);
                 self.addItem(
                     new MenuItem(self._cardLabels[suspension.getCard()], suspension_sub_label, index, {})
                 );

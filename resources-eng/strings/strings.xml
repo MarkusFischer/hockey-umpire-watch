@@ -1,8 +1,6 @@
 <strings>
     <string id="AppName">Hockey Umpire Watch</string>
 
-    <string id="menu_quitApp">Quit App</string>
-
     <string id="gameEventMenu_title">Game events</string>
     <string id="gameEventMenu_goals">Goals</string>
     <string id="gameEventMenu_listSuspensions">List suspensions</string>

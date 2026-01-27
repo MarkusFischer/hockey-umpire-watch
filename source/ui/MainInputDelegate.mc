@@ -12,12 +12,6 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
         self._app = app;
     }
 
-    function onMenu() as Boolean {
-        WatchUi.pushView(new Rez.Menus.MainMenu(), new MenuDelegate(self._app), WatchUi.SLIDE_UP);
-        return true;
-    }
-
-
     function onPreviousPage() as Boolean {
         WatchUi.pushView(new Rez.Menus.GameEventMenu(), new GameEventMenuDelegate(self._app), WatchUi.SLIDE_UP);
         return true;

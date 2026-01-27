@@ -1,8 +1,6 @@
 <strings>
     <string id="AppName">Hockey Schiedsrichter Uhr</string>
 
-    <string id="menu_quitApp">App beenden.</string>
-    
     <string id="gameEventMenu_title">Spielereignis</string>
     <string id="gameEventMenu_goals">Tore</string>
     <string id="gameEventMenu_listSuspensions">Kartenliste</string>

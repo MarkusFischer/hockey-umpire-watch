@@ -1,7 +1,4 @@
 <menus>
-    <menu id="MainMenu">
-        <menu-item id="quitApp" label="@Strings.menu_quitApp" />
-    </menu>
     <menu2 id="SuspensionSelectionMenu" title="@Strings.suspensionSelectionMenu_selectSuspension">
         <menu-item id="greenCard" label="@Strings.suspensionSelectionMenu_greenCard" />
         <menu-item id="yellowCardShort" label="@Strings.suspensionSelectionMenu_yellowCardShort" />

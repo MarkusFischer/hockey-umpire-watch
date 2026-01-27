@@ -13,7 +13,7 @@ class GameEventMenuDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item as WatchUi.MenuItem) as Void {
         switch (item.getId()) {
-            case :goals:
+            /*case :goals:
                 var goalMenu = new Rez.Menus.GoalMenu();
                 var listGoalsString = Lang.format(Application.loadResource(Rez.Strings.goalMenu_listGoals), [self._app.getGoalManager().getGoalCount(:homeTeam), self._app.getGoalManager().getGoalCount(:awayTeam)]);
                 var listGoalsSubLabel = Lang.format(Application.loadResource(Rez.Strings.goalMenu_listGoals_subtitle), [self._app.getGoalManager().getGoalCountHalfTime(:homeTeam), self._app.getGoalManager().getGoalCountHalfTime(:awayTeam)]);
@@ -23,9 +23,15 @@ class GameEventMenuDelegate extends WatchUi.Menu2InputDelegate {
                 break;
             case :listSuspensions:
                 WatchUi.pushView(new SuspensionListMenu(self._app), new SuspensionListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
+                break;*/
+            case :giveGoal:
+                WatchUi.pushView(new TeamPicker(), new TeamPickerDelegate(_app), WatchUi.SLIDE_IMMEDIATE);
                 break;
             case :suspendPlayer:
                 WatchUi.pushView(new PlayerPicker(), new PlayerPickerDelegate(_app), WatchUi.SLIDE_IMMEDIATE);
+                break;
+            case :gameEventList:
+                WatchUi.pushView(new GameEventListMenu(self._app), new SuspensionListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
                 break;
             case :quitApp:
                 var confirmationView = new WatchUi.Confirmation(Application.loadResource(Rez.Strings.gameEventMenu_quitAppConfirmation));

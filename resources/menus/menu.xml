@@ -11,9 +11,11 @@
         <menu-item id="redCard" label="@Strings.suspensionSelectionMenu_redCard" />
     </menu2>
     <menu2 id="GameEventMenu" title="@Strings.gameEventMenu_title">
-        <menu-item id="goals" label="@Strings.gameEventMenu_goals" />
-        <menu-item id="listSuspensions" label="@Strings.gameEventMenu_listSuspensions" />
+        <!--<menu-item id="goals" label="@Strings.gameEventMenu_goals" />
+        <menu-item id="listSuspensions" label="@Strings.gameEventMenu_listSuspensions" />-->
+        <menu-item id="giveGoal" label="@Strings.gameEventMenu_giveGoal" />
         <menu-item id="suspendPlayer" label="@Strings.gameEventMenu_suspendPlayer" />
+        <menu-item id="gameEventList" label="@Strings.gameEventMenu_gameEventList" />
         <menu-item id="quitApp" label="@Strings.gameEventMenu_quitApp" />
     </menu2>
     <menu2 id="GoalMenu" title="@Strings.goalMenu_title">

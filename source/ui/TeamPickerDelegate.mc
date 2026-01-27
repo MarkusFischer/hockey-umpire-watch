@@ -24,10 +24,10 @@ class TeamPickerDelegate extends WatchUi.PickerDelegate {
             self._app.getGoalManager().giveGoal(:awayTeam);
         }
 
-        //Three sub menus -> have to pop three views
+        //Two sub menus -> have to pop three views
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
-        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
+        //WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         return true;
     }
 }

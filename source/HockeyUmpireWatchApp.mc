@@ -12,6 +12,24 @@ class HockeyUmpireWatchApp extends Application.AppBase {
     private var _suspensionManager as SuspensionManager;
     private var _goalManager as GoalManager;
 
+    // TODO should this be added to a own class?
+    private var _gameEvents as Array<GameEvent> = [];
+
+    function addGameEvent(event as GameEvent) as Void {
+        self._gameEvents.add(event);
+    }
+
+    function getNumberOfGameEvents() as Number {
+        return self._gameEvents.size();
+    }
+
+    function getGameEventByIndex(index as Number) as GameEvent? {
+        if (index >= 0 and index < self._gameEvents.size()) {
+            return self._gameEvents[index];
+        }
+        return null;
+    }
+
     function getCurrentHeartRate() as Number {
         return self._currentHeartRate;
     }

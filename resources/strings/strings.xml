@@ -9,6 +9,8 @@
     <string id="gameEventMenu_suspendPlayer">Suspend player</string>
     <string id="gameEventMenu_quitApp">Quit App</string>
     <string id="gameEventMenu_quitAppConfirmation">Do you really want to quit?</string>
+    <string id="gameEventMenu_giveGoal">Give Goal</string>
+    <string id="gameEventMenu_gameEventList">Game Events</string>
 
     <string id="suspensionSelectionMenu_selectSuspension">Select suspension</string>
     <string id="suspensionSelectionMenu_greenCard">green card</string>
@@ -34,6 +36,23 @@
     <string id="goalMenu_listGoals">$1$:$2$</string>
     <string id="goalMenu_listGoals_subtitle">HT: $1$:$2$</string>
     <string id="goalMenu_giveGoal">Give Goal</string>
+
+    <string id="gameEventListMenu_title">Game Events</string>
+    <string id="gameEventListMenu_greenCard">green card</string>
+    <string id="gameEventListMenu_yellowCardShort">yellow card</string>
+    <string id="gameEventListMenu_yellowCardMedium">yellow card</string>
+    <string id="gameEventListMenu_yellowCardLong">yellow card</string>
+    <string id="gameEventListMenu_yellowRedCard">yellow-red card</string>
+    <string id="gameEventListMenu_redCard">red card</string>
+    <string id="gameEventListMenu_homeTeam">H</string>
+    <string id="gameEventListMenu_awayTeam">G</string>
+    <string id="gameEventListMenu_homeTeam_long">home</string>
+    <string id="gameEventListMenu_awayTeam_long">guest</string>
+    <string id="gameEventListMenu_card_subtitle">$3$ min: $1$ Nr. $2$</string>
+    <string id="gameEventListMenu_listGoals">$1$:$2$</string>
+    <string id="gameEventListMenu_listGoals_subtitle">HT: $1$:$2$</string>
+    <string id="gameEventListMenu_goal">goal $1$ team</string>
+    <string id="gameEventListMenu_goal_subtitle">$1$ min</string>
 
     <string id="mainLayout_nextExpiringSuspension">Expiring Suspen.:</string>
     <string id="mainLayout_playtimeExpired">Playtime over!</string>

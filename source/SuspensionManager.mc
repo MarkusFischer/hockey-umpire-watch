@@ -181,6 +181,7 @@ class SuspensionManager {
     public function insertSuspension(suspension as Suspension) as Void {
         // Insert the suspension in the list of all suspensions
         self._allSuspensions[self._totalGivenSuspensions] = suspension;
+        self._app.addGameEvent(suspension);
         self._totalGivenSuspensions += 1;
         
         if (suspension.getCard() == :redCard or suspension.getCard() == :yellowRedCard) {

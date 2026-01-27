@@ -9,8 +9,6 @@ class GoalManager {
     private var _goalsHomeHalfTime as Number = 0;
     private var _goalsAwayHalfTime as Number = 0;
 
-    private var _goals as Array<Goal> = [];
-
     private var _app as HockeyUmpireWatchApp?;
 
     public function initialize(app as HockeyUmpireWatchApp?) {
@@ -47,14 +45,14 @@ class GoalManager {
                 self._goalsHomeHalfTime += 1;
             }    
             var goal = new Goal(:homeTeam, quarter, remainingPlayTime, null, 0);
-            self._goals.add(goal);
+            self._app.addGameEvent(goal);
         } else if (team == :awayTeam) {
             self._goalsAway += 1;
             if (quarter <= Properties.getValue("maxQuarters") / 2) {
                 self._goalsAwayHalfTime += 1;
             }
             var goal = new Goal(:awayTeam, quarter, remainingPlayTime, null, 0);
-            self._goals.add(goal);
+            self._app.addGameEvent(goal);
         }
     }
 }

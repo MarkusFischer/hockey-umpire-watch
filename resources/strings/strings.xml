@@ -12,9 +12,10 @@
 
     <string id="suspensionSelectionMenu_selectSuspension">Select suspension</string>
     <string id="suspensionSelectionMenu_greenCard">green card</string>
-    <string id="suspensionSelectionMenu_yellowCardShort">short yellow card</string>
-    <string id="suspensionSelectionMenu_yellowCardMedium">medium yellow card</string>
-    <string id="suspensionSelectionMenu_yellowCardLong">long yellow card</string>
+    <string id="suspensionSelectionMenu_yellowCardShort">yellow card</string>
+    <string id="suspensionSelectionMenu_yellowCardMedium">yellow card</string>
+    <string id="suspensionSelectionMenu_yellowCardLong">yellow card</string>
+    <string id="suspensionSelectionMenu_card_subtitle">$1$ min</string>
     <string id="suspensionSelectionMenu_yellowRedCard">yellow red card</string>
     <string id="suspensionSelectionMenu_redCard">red card</string>
     

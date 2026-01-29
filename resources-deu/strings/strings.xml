@@ -4,17 +4,18 @@
     <string id="gameEventMenu_title">Spielereignis</string>
     <string id="gameEventMenu_goals">Tore</string>
     <string id="gameEventMenu_listSuspensions">Kartenliste</string>
-    <string id="gameEventMenu_suspendPlayer">Karte vergeben.</string>
-    <string id="gameEventMenu_quitApp">App beenden.</string>
+    <string id="gameEventMenu_suspendPlayer">Karte vergeben</string>
+    <string id="gameEventMenu_quitApp">App beenden</string>
     <string id="gameEventMenu_quitAppConfirmation">Möchtest du die App wirklich beenden?</string>
     <string id="gameEventMenu_giveGoal">Tor vergeben</string>
-    <string id="gameEventMenu_gameEventList">Spielereignisliste</string>
+    <string id="gameEventMenu_gameEventList">Spielprotokoll</string>
 
     <string id="suspensionSelectionMenu_selectSuspension">Strafe auswählen.</string>
     <string id="suspensionSelectionMenu_greenCard">grüne Karte</string>
-    <string id="suspensionSelectionMenu_yellowCardShort">kurze gelbe Karte</string>
-    <string id="suspensionSelectionMenu_yellowCardMedium">mittlere gelbe Karte</string>
-    <string id="suspensionSelectionMenu_yellowCardLong">lange gelbe Karte</string>
+    <string id="suspensionSelectionMenu_yellowCardShort">gelbe Karte</string>
+    <string id="suspensionSelectionMenu_yellowCardMedium">gelbe Karte</string>
+    <string id="suspensionSelectionMenu_yellowCardLong">gelbe Karte</string>
+    <string id="suspensionSelectionMenu_card_subtitle">$1$ min</string>
     <string id="suspensionSelectionMenu_yellowRedCard">gelb-rote Karte</string>
     <string id="suspensionSelectionMenu_redCard">rote Karte</string>
 
@@ -35,7 +36,7 @@
     <string id="goalMenu_listGoals_subtitle">Halbzeit: $1$:$2$</string>
     <string id="goalMenu_giveGoal">Tor vergeben</string>
 
-    <string id="gameEventListMenu_title">Spielereignise</string>
+    <string id="gameEventListMenu_title">Spielprotokoll</string>
     <string id="gameEventListMenu_greenCard">Grüne Karte</string>
     <string id="gameEventListMenu_yellowCardShort">Gelbe Karte</string>
     <string id="gameEventListMenu_yellowCardMedium">Gelbe Karte</string>

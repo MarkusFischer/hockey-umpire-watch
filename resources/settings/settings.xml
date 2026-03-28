@@ -37,4 +37,24 @@
             <settingConfig type="numeric" min="0" />
         </setting>
     </group>
+    <group id="enableFunctionsSettings" title="@Strings.settings_enableFunctionsSettings">
+        <setting propertyKey="@Properties.displayPlayTimeMilliSeconds" title="@Strings.settings_enableFunctionsSettings_displayPlayTimeMilliSeconds">
+            <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.enableGoalTracking" title="@Strings.settings_enableFunctionsSettings_enableGoalTracking">
+            <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.enableSuspensions" title="@Strings.settings_enableFunctionsSettings_enableSuspensions">
+            <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.enableGameEventList" title="@Strings.settings_enableFunctionsSettings_enableGameEventList">
+            <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.enableGoalConfirmation" title="@Strings.settings_enableFunctionsSettings_enableGoalConfirmation">
+            <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.enableSuspensionConfirmation" title="@Strings.settings_enableFunctionsSettings_enableSuspensionConfirmation">
+            <settingConfig type="boolean" />
+        </setting>
+    </group>
 </settings>

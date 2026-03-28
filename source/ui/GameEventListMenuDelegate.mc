@@ -2,7 +2,7 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
 
-class SuspensionListMenuDelegate extends WatchUi.Menu2InputDelegate {
+class GameEventListMenuDelegate extends WatchUi.Menu2InputDelegate {
 
     private var _app as HockeyUmpireWatchApp?;
 

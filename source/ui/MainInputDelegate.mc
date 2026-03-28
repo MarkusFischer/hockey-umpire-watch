@@ -2,6 +2,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.Attention;
+import Toybox.Application;
 
 class MainInputDelegate extends WatchUi.BehaviorDelegate {
 
@@ -13,7 +14,28 @@ class MainInputDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onPreviousPage() as Boolean {
-        WatchUi.pushView(new Rez.Menus.GameEventMenu(), new GameEventMenuDelegate(self._app), WatchUi.SLIDE_UP);
+        var gameEventMenu = new Rez.Menus.GameEventMenu();
+        if (!Properties.getValue("enableGoalTracking")) {
+            var menuItemID = gameEventMenu.findItemById(:giveGoal);
+            if (menuItemID != -1) {
+                gameEventMenu.deleteItem(menuItemID);
+            }
+        } 
+
+        if (!Properties.getValue("enableSuspensions")) {
+            var menuItemID = gameEventMenu.findItemById(:suspendPlayer);
+            if (menuItemID != -1) {
+                gameEventMenu.deleteItem(menuItemID);
+            }
+        }
+
+        if (!Properties.getValue("enableGameEventList")) {
+            var menuItemID = gameEventMenu.findItemById(:gameEventList);
+            if (menuItemID != -1) {
+                gameEventMenu.deleteItem(menuItemID);
+            }
+        } 
+        WatchUi.pushView(gameEventMenu, new GameEventMenuDelegate(self._app), WatchUi.SLIDE_UP);
         return true;
     }
 

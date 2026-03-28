@@ -79,4 +79,11 @@
     <string id="settings_suspensionSettings_yellowCardLongSuspensionTime">Yellow card long suspension time (s)</string>
     <string id="settings_suspensionSettings_yellowRedCardRefill">Allow refill after yellow-red card?</string>
     <string id="settings_suspensionSettings_yellowRedCardSuspensionTime">Yellow-red card refill time (s)</string>
+    <string id="settings_enableFunctionsSettings">Enable different functions</string>
+    <string id="settings_enableFunctionsSettings_displayPlayTimeMilliSeconds">Display milliseconds of playtime</string>
+    <string id="settings_enableFunctionsSettings_enableGoalTracking">Enable goal tracking</string>
+    <string id="settings_enableFunctionsSettings_enableSuspensions">Enable suspensions</string>
+    <string id="settings_enableFunctionsSettings_enableGameEventList">Enable game event list</string>
+    <string id="settings_enableFunctionsSettings_enableGoalConfirmation">Enable goal confirmation dialog</string>
+    <string id="settings_enableFunctionsSettings_enableSuspensionConfirmation">Enable suspension confirmation dialog</string>
 </strings>

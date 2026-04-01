@@ -13,8 +13,4 @@
         <menu-item id="gameEventList" label="@Strings.gameEventMenu_gameEventList" />
         <menu-item id="quitApp" label="@Strings.gameEventMenu_quitApp" />
     </menu2>
-    <menu2 id="GoalMenu" title="@Strings.goalMenu_title">
-        <menu-item id="listGoals" label="@Strings.goalMenu_listGoals" />
-        <menu-item id="giveGoal" label="@Strings.goalMenu_giveGoal" />
-    </menu2>
 </menus>

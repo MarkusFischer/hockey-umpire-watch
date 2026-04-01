@@ -41,10 +41,4 @@
     <setting propertyKey="@Properties.enableGameEventList" title="@Strings.settings_enableFunctionsSettings_enableGameEventList">
         <settingConfig type="boolean" />
     </setting>
-    <setting propertyKey="@Properties.enableGoalConfirmation" title="@Strings.settings_enableFunctionsSettings_enableGoalConfirmation">
-        <settingConfig type="boolean" />
-    </setting>
-    <setting propertyKey="@Properties.enableSuspensionConfirmation" title="@Strings.settings_enableFunctionsSettings_enableSuspensionConfirmation">
-        <settingConfig type="boolean" />
-    </setting>
 </settings>

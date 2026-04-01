@@ -34,6 +34,11 @@ Du kannst die Menüs mit den Up- und Down-Tasten navigieren und eine Aktion mit 
 Die Anzahl der Spielabschnitte, die Spielzeit für jeden Abschnitt und die Vorbereitungszeit für die Strafecken kann im Einstellungsmenü der Garmin Connect IQ App angepasst werden. Auf die gleiche Weise können die Zeiten der persönlichen Strafen angepasst werden. Es gibt vier vordefinierte Zeiten, eine für die grüne Karte und drei für gelbe Karten.
 
 ## Changelog
+* v1.1.1
+  - Fehlerbehebung: In seltenen Fällen wurden Einstellungen nicht gespeichert.
+  - Hinzugefügt: Option um Toreintragung, persönliche Strafen und Spielereignisliste zu deaktivieren. 
+  - Hinzugefügt: Option um Millisekunden der Spielzeit auszublenden.
+
 * v1.1
   - Hinzugefügt: Menü um Tore einzutragen.
   - Hinzugefügt: Liste aller Spielereignisse (Tore und persönliche Strafen).

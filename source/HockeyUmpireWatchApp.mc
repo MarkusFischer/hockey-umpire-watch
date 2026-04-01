@@ -48,6 +48,26 @@ class HockeyUmpireWatchApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
+        if (Properties.getValue("enableGoalTracking") == null) {
+            Properties.setValue("enableGoalTracking", true);
+        }
+
+        if (Properties.getValue("enableSuspensions") == null) {
+            Properties.setValue("enableSuspensions", true);
+        }
+
+        if (Properties.getValue("enableGameEventList") == null) {
+            Properties.setValue("enableGameEventList", true);
+        }
+
+        if (Properties.getValue("enableGoalConfirmation") == null) {
+            Properties.setValue("enableGoalConfirmation", false);
+        }
+
+        if (Properties.getValue("enableSuspensionConfirmation") == null) {
+            Properties.setValue("enableSuspensionConfirmation", false);
+        }
+        
         self._timeKeeper = new TimeKeeper(self);
         self._refreshDisplayTimer = new Timer.Timer();
         self._suspensionManager = new SuspensionManager(self);

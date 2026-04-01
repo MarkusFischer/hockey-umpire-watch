@@ -79,4 +79,11 @@
     <string id="settings_suspensionSettings_yellowCardLongSuspensionTime">Strafzeit lange gelbe Karte (s)</string>
     <string id="settings_suspensionSettings_yellowRedCardRefill">Nach gelb-roter Karte wieder auffüllen?</string>
     <string id="settings_suspensionSettings_yellowRedCardSuspensionTime">Wiederauffüllzeit gelb-rote Karte (s)</string>
+    <string id="settings_enableFunctionsSettings">Verschiedene Funktionen aktivieren</string>
+    <string id="settings_enableFunctionsSettings_displayPlayTimeMilliSeconds">Millisekunden der Spielzeit anzeigen</string>
+    <string id="settings_enableFunctionsSettings_enableGoalTracking">Tore abspeichern</string>
+    <string id="settings_enableFunctionsSettings_enableSuspensions">Persönliche Strafen aktivieren</string>
+    <string id="settings_enableFunctionsSettings_enableGameEventList">Spielereignisliste aktivieren</string>
+    <string id="settings_enableFunctionsSettings_enableGoalConfirmation">Bestätigungsdialog für Tore</string>
+    <string id="settings_enableFunctionsSettings_enableSuspensionConfirmation">Bestätigungsdialog für persönliche Strafen</string>
 </strings>

@@ -13,17 +13,6 @@ class GameEventMenuDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item as WatchUi.MenuItem) as Void {
         switch (item.getId()) {
-            /*case :goals:
-                var goalMenu = new Rez.Menus.GoalMenu();
-                var listGoalsString = Lang.format(Application.loadResource(Rez.Strings.goalMenu_listGoals), [self._app.getGoalManager().getGoalCount(:homeTeam), self._app.getGoalManager().getGoalCount(:awayTeam)]);
-                var listGoalsSubLabel = Lang.format(Application.loadResource(Rez.Strings.goalMenu_listGoals_subtitle), [self._app.getGoalManager().getGoalCountHalfTime(:homeTeam), self._app.getGoalManager().getGoalCountHalfTime(:awayTeam)]);
-                goalMenu.getItem(0).setLabel(listGoalsString);
-                goalMenu.getItem(0).setSubLabel(listGoalsSubLabel);
-                WatchUi.pushView(goalMenu, new GoalMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
-                break;
-            case :listSuspensions:
-                WatchUi.pushView(new SuspensionListMenu(self._app), new SuspensionListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
-                break;*/
             case :giveGoal:
                 WatchUi.pushView(new TeamPicker(), new TeamPickerDelegate(_app), WatchUi.SLIDE_IMMEDIATE);
                 break;
@@ -31,7 +20,7 @@ class GameEventMenuDelegate extends WatchUi.Menu2InputDelegate {
                 WatchUi.pushView(new PlayerPicker(), new PlayerPickerDelegate(_app), WatchUi.SLIDE_IMMEDIATE);
                 break;
             case :gameEventList:
-                WatchUi.pushView(new GameEventListMenu(self._app), new SuspensionListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
+                WatchUi.pushView(new GameEventListMenu(self._app), new GameEventListMenuDelegate(self._app), WatchUi.SLIDE_IMMEDIATE);
                 break;
             case :quitApp:
                 var confirmationView = new WatchUi.Confirmation(Application.loadResource(Rez.Strings.gameEventMenu_quitAppConfirmation));

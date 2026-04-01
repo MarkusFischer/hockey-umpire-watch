@@ -37,6 +37,11 @@ To customize the number of periods, the playtime for each period, and the countd
 
 ## Changelog
 
+* v1.1.1
+  - Fixed: Sometimes the settings were not saved.
+  - Added: Option to disable goal tracking, player suspensions and game event list (all enabled by default).
+  - Added: Option to hide milliseconds of playtime.
+
 * v1.1
   - Added: Menu to keep track of all given goals.
   - Added: List of all game events (goals and  player suspensions).
